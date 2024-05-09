@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ProjectSEE - Una versión simple del teorema de embebimiento de Sobolev</title>
+<title>ProjectSEE - Aproximación de W^{k,p}(Ω) mediante funciones suaves</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ window.Quarto = {
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
-    <a href="https://twitter.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+    <a href="https://twitter.com/FLMM" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -140,7 +140,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./SobolevEmbeb.html">Teorema del embebimiento</a></li><li class="breadcrumb-item"><a href="./SobolevEmbeb.html">Una versión simple del teorema de embebimiento de Sobolev</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./SobolevAprox.html">Aproximación mediante funciones suaves</a></li><li class="breadcrumb-item"><a href="./SobolevAprox.html">Aproximación de W^{k,p}(Ω) mediante funciones suaves</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -220,7 +220,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./SobolevEmbeb.html" class="sidebar-item-text sidebar-link active">
+  <a href="./SobolevEmbeb.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Una versión simple del teorema de embebimiento de Sobolev</span></a>
   </div>
 </li>
@@ -237,7 +237,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./SobolevAprox.html" class="sidebar-item-text sidebar-link">
+  <a href="./SobolevAprox.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Aproximación de W^{k,p}(Ω) mediante funciones suaves</span></a>
   </div>
 </li>
@@ -271,9 +271,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./SobolevEmbeb.html">Teorema del embebimiento</a></li><li class="breadcrumb-item"><a href="./SobolevEmbeb.html">Una versión simple del teorema de embebimiento de Sobolev</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./SobolevAprox.html">Aproximación mediante funciones suaves</a></li><li class="breadcrumb-item"><a href="./SobolevAprox.html">Aproximación de W^{k,p}(Ω) mediante funciones suaves</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Una versión simple del teorema de embebimiento de Sobolev</h1>
+<h1 class="title">Aproximación de W^{k,p}(Ω) mediante funciones suaves</h1>
 </div>
 
 
@@ -303,48 +303,42 @@ window.Quarto = {
 \renewcommand{\qedsymbol}{\blacksquare}
 \]</span></p>
 </div>
-<p>Para dos espacios de Banach <span class="math inline">\(\mathbb{B}_1\)</span> y <span class="math inline">\(\mathbb{B}_2\)</span>, decimos que <span class="math inline">\(\mathbb{B}_1\)</span> es embebido (incluido) en <span class="math inline">\(\mathbb{B}_2\)</span> si <span class="math inline">\(\|u\|_{\mathbb{B}_2} \leq C\|u\|_{\mathbb{B}_1}\)</span> para alguna constante <span class="math inline">\(C\)</span> y para <span class="math inline">\(u \in \mathbb{B}_1\)</span>. Deseamos determinar qué espacios de Sobolev <span class="math inline">\(W^{k, p}(\Omega)\)</span> pueden ser embebidos en el espacio de funciones continuas. Para motivar el tipo de análisis que se empleará, estudiaremos un caso especial.</p>
+<p>Recuerde que <span class="math inline">\(\Omega_\epsilon=\{x \in \Omega \mid \operatorname{dist}(x, \partial \Omega)&gt;\epsilon\}\)</span>.</p>
+<div class="definitionbox">
+<div class="definitionbox-header">
+<div class="definitionbox-icon">
+
+</div>
+<p>Definición 4.1</p>
+</div>
+<div class="definitionbox-body">
+<p>Una secuencia <span class="math inline">\(u_j \rightarrow u\)</span> en <span class="math inline">\(W_{\mathrm{loc}}^{k, p}(\Omega)\)</span> si <span class="math inline">\(u_j \rightarrow u\)</span> en <span class="math inline">\(W^{k, p}(\tilde{\Omega})\)</span> para cada <span class="math inline">\(\tilde{\Omega} \subset \subset \Omega\)</span>.</p>
+</div>
+</div>
 <div class="theorembox">
 <div class="theorembox-header">
 <div class="theorembox-icon">
 
 </div>
-<p>Teorema 3.1 Embebimiento de Sobolev en 2-D</p>
+<p>Definición</p>
 </div>
 <div class="theorembox-body">
-<p>Para <span class="math inline">\(k p \geq 2\)</span>, <span class="math display">\[
-\max _{x \in \mathbb{R}^2}|u(x)| \leq C\|u\|_{W^{k, p}\left(\mathbb{R}^2\right)} \quad \forall u \in C_0^{\infty}(\Omega) .
-\]</span></p>
+<p>Para enteros <span class="math inline">\(k \geq 0\)</span> y <span class="math inline">\(1 \leq p&lt;\infty\)</span>, sea <span class="math display">\[
+u^\epsilon=\eta_\epsilon * u \text { en } \Omega_\epsilon,
+\]</span> donde <span class="math inline">\(\eta_\epsilon\)</span> es el suavizador estándar definido Preliminares. Entonces</p>
+<p>A<span class="math inline">\()\)</span> <span class="math inline">\(u^\epsilon \in C^{\infty}\left(\Omega_\epsilon\right)\)</span> para cada <span class="math inline">\(\epsilon&gt;0\)</span>, y<br>
+B<span class="math inline">\()\)</span> <span class="math inline">\(u^\epsilon \rightarrow u\)</span> en <span class="math inline">\(W_{\mathrm{loc}}^{k, p}(\Omega)\)</span> cuando <span class="math inline">\(\epsilon \rightarrow 0\)</span>.</p>
 </div>
 </div>
-<p><em>Demostración:</em><br>
-Dado <span class="math inline">\(u \in C_0^{\infty}(\Omega)\)</span>, demostramos que para todo <span class="math inline">\(x \in \operatorname{supp}(u)\)</span>, <span class="math display">\[
-    |u(x)| \leq C\left\|D^\alpha u(x)\right\|_{L^p(\Omega)} \quad \forall|\alpha| \leq k .
-    \]</span> Al elegir un sistema de coordenadas centrado en <span class="math inline">\(x\)</span>, podemos asumir que <span class="math inline">\(x=0\)</span>; por lo tanto, basta con demostrar que <span class="math display">\[
-    |u(0)| \leq C\left\|D^\alpha u(x)\right\|_{L^p(\Omega)} \quad \forall|\alpha| \leq k .
-    \]</span> Sea <span class="math inline">\(g \in C^{\infty}([0, \infty))\)</span> con <span class="math inline">\(0 \leq g \leq 1\)</span>, de manera que <span class="math inline">\(g(x)=1\)</span> para <span class="math inline">\(x \in \left[0, \frac{1}{2}\right]\)</span> y <span class="math inline">\(g(x)=0\)</span> para <span class="math inline">\(x \in \left[\frac{3}{4}, \infty\right)\)</span>. Utilizando el teorema fundamental del cálculo, <span class="math display">\[
+<p><strong>Demostración:</strong><br>
+Parte (A) se prueba en el Teorema 1.15. A continuación, sea <span class="math inline">\(v^\alpha\)</span> la <span class="math inline">\(\alpha\)</span>-ésima derivada débil de <span class="math inline">\(u\)</span>. Para probar la parte (B), mostramos que <span class="math inline">\(D^\alpha u^\epsilon=\eta_\epsilon * v^\alpha\)</span> en <span class="math inline">\(\Omega_\epsilon\)</span>. Para <span class="math inline">\(x \in \Omega_\epsilon\)</span>, <span class="math display">\[
     \begin{aligned}
-    u(0) &amp; =-\int_0^1 \partial_r[g(r) u(r, \theta)] d r=-\int_0^1 \partial_r(r) \partial_r[g(r) u(r, \theta)] d r \\
-    &amp; =\int_0^1 r \partial_r^2[g(r) u(r, \theta)] d r \\
-    &amp; =\frac{(-1)^k}{(k-1) !} \int_0^1 r^{k-1} \partial_r^k[g(r) u(r, \theta)] d r=\frac{(-1)^k}{(k-1) !} \int_0^1 r^{k-2} \partial_r^k[g(r) u(r, \theta)] r d r
+    D^\alpha u^\epsilon(x) &amp; =D^\alpha \int_{\Omega} \eta_\epsilon(x-y) u(y) d y \\
+    &amp; =\int_{\Omega} D_x^\alpha \eta_\epsilon(x-y) u(y) d y \\
+    &amp; =(-1)^{|\alpha|} \int_{\Omega} D_y^\alpha \eta_\epsilon(x-y) u(y) d y \\
+    &amp; =\int_{\Omega} \eta_\epsilon(x-y) v^\alpha(y) d y=\left(\eta_\epsilon * v^\alpha\right)(x)
     \end{aligned}
-    \]</span> Al integrar ambos lados de 0 a <span class="math inline">\(2 \pi\)</span>, obtenemos que <span class="math display">\[
-    u(0)=\frac{(-1)^k}{2 \pi(k-1) !} \int_0^{2 \pi} \int_0^1 r^{k-2} \partial_r^k[g(r) u(r, \theta)] r d r d \theta .
-    \]</span> El cambio de variables de coordenadas cartesianas a coordenadas polares es dado por <span class="math display">\[
-    x(r, \theta)=r \cos \theta, \quad y(r, \theta)=r \sin \theta .
-    \]</span> Mediante la regla de la cadena, <span class="math display">\[
-    \begin{aligned}
-    \partial_r u(x(r, \theta), y(r, \theta)) &amp; =\partial_x u \cos \theta+\partial_y u \sin \theta \\
-    \partial_r^2 u(x(r, \theta), y(r, \theta)) &amp; =\partial_x^2 u \cos ^2 \theta+2 \partial_{x y}^2 u \cos \theta \sin \theta+\partial_y^2 u \sin ^2 \theta \\
-    &amp; \vdots
-    \end{aligned}
-    \]</span> Se sigue que <span class="math inline">\(\partial_r^k=\sum_{|\alpha| \leq k} a_\alpha(\theta) D^\alpha\)</span>, donde <span class="math inline">\(a_\alpha\)</span> consiste en polinomios trigonométricos de <span class="math inline">\(\theta\)</span>, de manera que <span class="math display">\[
-    \begin{aligned}
-    u(0) &amp; =\frac{(-1)^k}{2 \pi(k-1) !} \int_{B(0,1)} r^{k-2} \sum_{|\alpha| \leq k} a_\alpha(\theta) D^\alpha[g(r) u(x)] d x \\
-    &amp; \leq C\left\|r^{k-2}\right\|_{L^q(B(0,1))} \sum_{|\alpha| \leq k}\left\|D^\alpha(g u)\right\|_{L^p(B(0,1))} \\
-    &amp; \leq C\left(\int_0^1 r^{\frac{p(k-2)}{p-1}} r d r\right)^{\frac{p-1}{p}}\|u\|_{W^{k, p}\left(\mathbb{R}^2\right)} .
-    \end{aligned}
-    \]</span> Por lo tanto, necesitamos <span class="math inline">\(\frac{p(k-2)}{p-1}+1&gt;-1\)</span> o <span class="math inline">\(k p&gt;2\)</span>. <span class="math inline">\(\qedsymbol\)</span></p>
+    \]</span> Por la parte (D) del Teorema <span class="math inline">\(1.28, D^\alpha u^\epsilon \rightarrow v^\alpha\)</span> en <span class="math inline">\(L_{\mathrm{loc}}^p(\Omega)\)</span>. <span class="math inline">\(\qedsymbol\)</span></p>
 
 
 

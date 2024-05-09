@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ProjectSEE - Aproximación de W^{k,p}(Ω) mediante funciones suaves</title>
+<title>ProjectSEE - Conocimiento previo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ window.Quarto = {
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
-    <a href="https://twitter.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+    <a href="https://twitter.com/FLMM" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -140,7 +140,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./SobolevAprox.html">Aproximación mediante funciones suaves</a></li><li class="breadcrumb-item"><a href="./SobolevAprox.html">Aproximación de W^{k,p}(Ω) mediante funciones suaves</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Teo.html">Resultados importantes</a></li><li class="breadcrumb-item"><a href="./Teo.html">Conocimiento previo</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -180,7 +180,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Teo.html" class="sidebar-item-text sidebar-link">
+  <a href="./Teo.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Conocimiento previo</span></a>
   </div>
 </li>
@@ -237,7 +237,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./SobolevAprox.html" class="sidebar-item-text sidebar-link active">
+  <a href="./SobolevAprox.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Aproximación de W^{k,p}(Ω) mediante funciones suaves</span></a>
   </div>
 </li>
@@ -266,14 +266,22 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#definiciónes" id="toc-definiciónes" class="nav-link active" data-scroll-target="#definiciónes">Definiciónes</a></li>
+  <li><a href="#lemas" id="toc-lemas" class="nav-link" data-scroll-target="#lemas">Lemas</a></li>
+  <li><a href="#teoremas" id="toc-teoremas" class="nav-link" data-scroll-target="#teoremas">Teoremas</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./SobolevAprox.html">Aproximación mediante funciones suaves</a></li><li class="breadcrumb-item"><a href="./SobolevAprox.html">Aproximación de W^{k,p}(Ω) mediante funciones suaves</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Teo.html">Resultados importantes</a></li><li class="breadcrumb-item"><a href="./Teo.html">Conocimiento previo</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Aproximación de W^{k,p}(Ω) mediante funciones suaves</h1>
+<h1 class="title">Conocimiento previo</h1>
 </div>
 
 
@@ -293,26 +301,143 @@ window.Quarto = {
 <div class="hidden">
 <p><span class="math display">\[
 \usepackage{amssymb}
-\usepackage{amsmath}
+\usepackage{fontawesome5}
+\usepackage{awesomebox}
 \def\R{{\mathbb{R}}}
-\def\Z{{\mathbb{Z}}}
-\newcommand{\norm}[1]{\left\| #1 \right\|}
-\newcommand{\abs}[1]{\left| #1 \right|}
-\def\sen{{\textrm{sen}}}
-\def\cos{{\textrm{cos}}}
-\renewcommand{\qedsymbol}{\blacksquare}
 \]</span></p>
 </div>
-<p>Recuerde que <span class="math inline">\(\Omega_\epsilon=\{x \in \Omega \mid \operatorname{dist}(x, \partial \Omega)&gt;\epsilon\}\)</span>.</p>
+<section id="definiciónes" class="level1">
+<h1>Definiciónes</h1>
 <div class="definitionbox">
 <div class="definitionbox-header">
 <div class="definitionbox-icon">
 
 </div>
-<p>Definición 4.1</p>
+<p>Definición 1.1</p>
 </div>
 <div class="definitionbox-body">
-<p>Una secuencia <span class="math inline">\(u_j \rightarrow u\)</span> en <span class="math inline">\(W_{\mathrm{loc}}^{k, p}(\Omega)\)</span> si <span class="math inline">\(u_j \rightarrow u\)</span> en <span class="math inline">\(W^{k, p}(\tilde{\Omega})\)</span> para cada <span class="math inline">\(\tilde{\Omega} \subset \subset \Omega\)</span>.</p>
+Para <span class="math inline">\(\Omega \subset \R^n\)</span> abierto, el conjunto <span class="math display">\[
+    L^{p}_{\mathrm{loc}}(\Omega) = \{u: \Omega \to \R \mid u \in L^{p}(\tilde{\Omega}) \quad \forall \tilde{\Omega} \subset \subset \Omega\}
+    \]</span>
+<center>
+<img src="Figures/Figura1.png" class="img-fluid" style="width:50.0%">
+</center>
+</div>
+</div>
+<div class="definitionbox">
+<div class="definitionbox-header">
+<div class="definitionbox-icon">
+
+</div>
+<p>Definición 1.10</p>
+</div>
+<div class="definitionbox-body">
+<p>Sea <span class="math inline">\(0&lt;p&lt;\infty\)</span> y sea <span class="math inline">\((X, \mathcal{M}, \mu)\)</span> un espacio de medida. Si <span class="math inline">\(f: X \rightarrow \mathbb{R}\)</span> es una función medible, entonces definimos <span class="math display">\[
+\|f\|_{L^p(X)}:=\left(\int_X|f|^p d x\right)^{\frac{1}{p}} \quad \text { y } \quad\|f\|_{L^{\infty}(X)}:=\operatorname{ess\sup}\limits_{x \in X}|f(x)| .
+\]</span> Observa que <span class="math inline">\(\|f\|_{L^p(X)}\)</span> puede tomar el valor <span class="math inline">\(\infty\)</span>. A menos que se indique lo contrario, normalmente consideraremos que <span class="math inline">\(X\)</span> es un subconjunto suave y abierto <span class="math inline">\(\Omega\)</span> de <span class="math inline">\(\mathbb{R}^n\)</span>, y asumiremos que todas las funciones bajo consideración son medibles.</p>
+</div>
+</div>
+<div class="definitionbox">
+<div class="definitionbox-header">
+<div class="definitionbox-icon">
+
+</div>
+<p>Definición 1.11</p>
+</div>
+<div class="definitionbox-body">
+<p>El espacio <span class="math inline">\(L^p(X)\)</span> es el conjunto <span class="math display">\[
+L^p(X)=\left\{f: X \rightarrow \mathbb{R} \mid\|f\|_{L^p(X)}&lt;\infty\right\} .
+\]</span> El espacio <span class="math inline">\(L^p(X)\)</span> satisface las siguientes propiedades de espacio vectorial:</p>
+<ol type="1">
+<li>Para cada <span class="math inline">\(\alpha \in \mathbb{R}\)</span>, si <span class="math inline">\(f \in L^p(X)\)</span> entonces <span class="math inline">\(\alpha f \in L^p(X)\)</span>;</li>
+<li>Si <span class="math inline">\(f, g \in L^p(X)\)</span>, entonces <span class="math display">\[
+|f+g|^p \leq 2^{p-1}\left(|f|^p+|g|^p\right),
+\]</span> de manera que <span class="math inline">\(f+g \in L^p(X)\)</span>.</li>
+<li>La desigualdad del triángulo es válida si <span class="math inline">\(p \geq 1\)</span>.</li>
+</ol>
+</div>
+</div>
+<div class="definitionbox">
+<div class="definitionbox-header">
+<div class="definitionbox-icon">
+
+</div>
+<p>Definición 1.13 Regularizadores</p>
+</div>
+<div class="definitionbox-body">
+<p>Si <span class="math inline">\(f \in L^1_{\text{loc}}(\Omega)\)</span>, se define el regularizador como <span class="math display">\[f^{\varepsilon} = n_{\varepsilon} * f \, \text{en } \Omega_{\varepsilon}, \]</span> Así, <span class="math display">\[f^{\varepsilon} = \int_{\Omega} \eta_{\varepsilon}(x-y) f(y)dy = \int_{B(0, \varepsilon)} \eta_{\varepsilon}(x-y) f(y)dy \, \forall x \in \Omega_{\varepsilon}\]</span></p>
+</div>
+</div>
+<div class="definitionbox">
+<div class="definitionbox-header">
+<div class="definitionbox-icon">
+
+</div>
+<p>Definición 1.14 Regularizadores en <span class="math inline">\(L^1\)</span></p>
+</div>
+<div class="definitionbox-body">
+<p>Definamos <span class="math inline">\(\eta \in C^{\infty}(\R^n)\)</span> por <span class="math display">\[ \eta(x) :=
+    \begin{cases}
+        Ce^{(|x|^2-1)^{-1}}, \text{ si } |x| &lt;1, \\
+        0, \text{ si } |x| \geq 1
+    \end{cases}
+    \]</span> Con cierta constante <span class="math inline">\(C\)</span> tal que <span class="math inline">\(\displaystyle \int \limits_{\R^n} \eta(x) dx = 1\)</span>.<br>
+Para <span class="math inline">\(\varepsilon &gt;0\)</span>, la sucesión de regularizadores estándar en <span class="math inline">\(\R^n\)</span> es definida por <span class="math display">\[ \eta_{\varepsilon}(x) = \varepsilon^{-n} \eta(x/\varepsilon)\]</span> Satisfaciendo que <span class="math inline">\(\displaystyle \int \limits_{\R^n} \eta_{\varepsilon}(x) dx = 1\)</span> y <span class="math inline">\(\text{supp}(\eta_{\varepsilon}) \subset \overline{B(0, \varepsilon)}\)</span></p>
+</div>
+</div>
+</section>
+<section id="lemas" class="level1">
+<h1>Lemas</h1>
+<div class="lemmabox">
+<div class="lemmabox-header">
+<div class="lemmabox-icon">
+
+</div>
+<p>Lema 1.4 T.C.M</p>
+</div>
+<div class="lemmabox-body">
+<p>Si <span class="math inline">\(f_n \in L^1(X)\)</span>, <span class="math inline">\(0 \leq f_1(x) \leq f_2(x) \leq \cdots\)</span>, y <span class="math inline">\(\left\|f_n\right\|_{L^1(X)} \leq C&lt;\infty\)</span>, entonces <span class="math inline">\(\lim _{n \rightarrow \infty} f_n(x)=f(x)\)</span> con <span class="math inline">\(f \in L^1(X)\)</span> y <span class="math inline">\(\left\|f_n-f\right\|_{L^1} \rightarrow 0\)</span> conforme <span class="math inline">\(n \rightarrow 0\)</span>.</p>
+</div>
+</div>
+<div class="lemmabox">
+<div class="lemmabox-header">
+<div class="lemmabox-icon">
+
+</div>
+<p>Lema 1.5 T.C.D</p>
+</div>
+<div class="lemmabox-body">
+<p>Si <span class="math inline">\(f_n \in L^1(X)\)</span>, <span class="math inline">\(\lim _{n \rightarrow \infty} f_n(x)=f(x)\)</span> casi en todas partes, y si <span class="math inline">\(\exists g \in L^1(X)\)</span> tal que <span class="math inline">\(\left|f_n(x)\right| \leq |g(x)|\)</span> casi en todas partes para todo <span class="math inline">\(n\)</span>, entonces <span class="math inline">\(f \in L^1(X)\)</span> y <span class="math inline">\(\left\|f_n-f\right\|_{L^1} \rightarrow 0\)</span>.</p>
+</div>
+</div>
+<div class="lemmabox">
+<div class="lemmabox-header">
+<div class="lemmabox-icon">
+
+</div>
+<p>Lema 1.8 Fatou</p>
+</div>
+<div class="lemmabox-body">
+<p>Supongamos que la secuencia <span class="math inline">\(f_n: \Omega \rightarrow \overline{\mathbb{R}}\)</span> y <span class="math inline">\(f_n \geq 0\)</span>. Entonces, <span class="math display">\[
+\int_{\Omega} \liminf _{n \rightarrow \infty} f_n(x) d x \leq \liminf _{n \rightarrow \infty} \int_{\Omega} f_n(x) d x
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="teoremas" class="level1">
+<h1>Teoremas</h1>
+<div class="theorembox">
+<div class="theorembox-header">
+<div class="theorembox-icon">
+
+</div>
+<p>Teorema 1.2 Desigualdad de Hölder</p>
+</div>
+<div class="theorembox-body">
+<p>Supongamos que <span class="math inline">\(1 \leq p \leq \infty\)</span> y <span class="math inline">\(1&lt;q&lt;\infty\)</span> con <span class="math inline">\(\frac{1}{p}+\frac{1}{q}=1\)</span>. Si <span class="math inline">\(f \in L^p\)</span> y <span class="math inline">\(g \in L^q\)</span>, entonces <span class="math inline">\(f g \in L^1\)</span>. Además, <span class="math display">\[
+\|f g\|_{L^1} \leq \|f\|_{L^p}\|g\|_{L^q}.
+\]</span></p>
+<p>Observa que si <span class="math inline">\(p=q=2\)</span>, entonces esto es la desigualdad de Cauchy-Schwarz ya que <span class="math inline">\(\|f g\|_{L^1}=\left|(f, g)_{L^2}\right|\)</span>. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 </div>
 </div>
 <div class="theorembox">
@@ -320,29 +445,97 @@ window.Quarto = {
 <div class="theorembox-icon">
 
 </div>
-<p>Definición</p>
+<p>Teorema 1.3 Desigualdad de Minkowski</p>
 </div>
 <div class="theorembox-body">
-<p>Para enteros <span class="math inline">\(k \geq 0\)</span> y <span class="math inline">\(1 \leq p&lt;\infty\)</span>, sea <span class="math display">\[
-u^\epsilon=\eta_\epsilon * u \text { en } \Omega_\epsilon,
-\]</span> donde <span class="math inline">\(\eta_\epsilon\)</span> es el suavizador estándar definido Preliminares. Entonces</p>
-<p>A<span class="math inline">\()\)</span> <span class="math inline">\(u^\epsilon \in C^{\infty}\left(\Omega_\epsilon\right)\)</span> para cada <span class="math inline">\(\epsilon&gt;0\)</span>, y<br>
-B<span class="math inline">\()\)</span> <span class="math inline">\(u^\epsilon \rightarrow u\)</span> en <span class="math inline">\(W_{\mathrm{loc}}^{k, p}(\Omega)\)</span> cuando <span class="math inline">\(\epsilon \rightarrow 0\)</span>.</p>
+<p>Si <span class="math inline">\(1 \leq p \leq \infty\)</span> y <span class="math inline">\(f, g \in L^p\)</span>, entonces <span class="math display">\[
+\|f+g\|_{L^p} \leq \|f\|_{L^p}+\|g\|_{L^p}.
+\]</span></p>
 </div>
 </div>
-<p><strong>Demostración:</strong><br>
-Parte (A) se prueba en el Teorema 1.15. A continuación, sea <span class="math inline">\(v^\alpha\)</span> la <span class="math inline">\(\alpha\)</span>-ésima derivada débil de <span class="math inline">\(u\)</span>. Para probar la parte (B), mostramos que <span class="math inline">\(D^\alpha u^\epsilon=\eta_\epsilon * v^\alpha\)</span> en <span class="math inline">\(\Omega_\epsilon\)</span>. Para <span class="math inline">\(x \in \Omega_\epsilon\)</span>, <span class="math display">\[
-    \begin{aligned}
-    D^\alpha u^\epsilon(x) &amp; =D^\alpha \int_{\Omega} \eta_\epsilon(x-y) u(y) d y \\
-    &amp; =\int_{\Omega} D_x^\alpha \eta_\epsilon(x-y) u(y) d y \\
-    &amp; =(-1)^{|\alpha|} \int_{\Omega} D_y^\alpha \eta_\epsilon(x-y) u(y) d y \\
-    &amp; =\int_{\Omega} \eta_\epsilon(x-y) v^\alpha(y) d y=\left(\eta_\epsilon * v^\alpha\right)(x)
-    \end{aligned}
-    \]</span> Por la parte (D) del Teorema <span class="math inline">\(1.28, D^\alpha u^\epsilon \rightarrow v^\alpha\)</span> en <span class="math inline">\(L_{\mathrm{loc}}^p(\Omega)\)</span>. <span class="math inline">\(\qedsymbol\)</span></p>
+<div class="theorembox">
+<div class="theorembox-header">
+<div class="theorembox-icon">
+
+</div>
+<p>Teorema 1.6</p>
+</div>
+<div class="theorembox-body">
+<p>El espacio <span class="math inline">\(L^p\)</span> es completo con <span class="math inline">\(p \leq \infty\)</span>.</p>
+</div>
+</div>
+<div class="theorembox">
+<div class="theorembox-header">
+<div class="theorembox-icon">
+
+</div>
+<p>Teorema 1.7 Teorema de Convergencia Monótona</p>
+</div>
+<div class="theorembox-body">
+<p>Sea <span class="math inline">\(f_n: \Omega \rightarrow \mathbb{R} \cup\{+\infty\}\)</span> una secuencia de funciones, <span class="math inline">\(f_n \geq 0\)</span>, y supongamos que la secuencia <span class="math inline">\(f_n\)</span> es monótonamente creciente, es decir, <span class="math display">\[
+f_1 \leq f_2 \leq f_3 \leq \cdots
+\]</span> Entonces, <span class="math display">\[
+\lim _{n \rightarrow \infty} \int_{\Omega} f_n(x) d x=\int_{\Omega} \lim _{n \rightarrow \infty} f_n(x) d x
+\]</span></p>
+</div>
+</div>
+<div class="theorembox">
+<div class="theorembox-header">
+<div class="theorembox-icon">
+
+</div>
+<p>Teorema 1.9 Teorema de Convergencia Dominada</p>
+</div>
+<div class="theorembox-body">
+<p>Supongamos que la secuencia <span class="math inline">\(f_n: \Omega \rightarrow \mathbb{R}\)</span>, <span class="math inline">\(f_n(x) \rightarrow f(x)\)</span> casi en todas partes (con respecto a la medida de Lebesgue), y además, <span class="math inline">\(\left|f_n\right| \leq g \in L^1(\Omega)\)</span>. Entonces <span class="math inline">\(f \in L^1(\Omega)\)</span> y <span class="math display">\[
+\lim _{n \rightarrow \infty} \int_{\Omega} f_n(x) d x=\int_{\Omega} f(x) d x .
+\]</span> De manera equivalente, <span class="math inline">\(f_n \rightarrow f\)</span> en <span class="math inline">\(L^1(\Omega)\)</span>, por lo que <span class="math inline">\(\lim _{n \rightarrow \infty}\left\|f_n-f\right\|_{L^1(\Omega)}=0\)</span></p>
+</div>
+</div>
+<div class="theorembox">
+<div class="theorembox-header">
+<div class="theorembox-icon">
+
+</div>
+<p>Teorema 1.12 Teorema fundamental del calculo de variaciones</p>
+</div>
+<div class="theorembox-body">
+<p>Si <span class="math inline">\(f \in L_{\text {loc }}^1(\Omega)\)</span> satisfaciendo que <span class="math display">\[
+    \int_{\Omega} f \varphi d x=0
+    \]</span><br>
+para cada <span class="math inline">\(\varphi \in C_0^{\infty}(\Omega)\)</span>, entonces <span class="math inline">\(f=0\)</span> a.e en <span class="math inline">\(\Omega\)</span>.</p>
+</div>
+</div>
+<div class="theorembox">
+<div class="theorembox-header">
+<div class="theorembox-icon">
+
+</div>
+<p>Teorema 1.15 Regularizadores en <span class="math inline">\(L^p(\Omega)\)</span></p>
+</div>
+<div class="theorembox-body">
+<ol type="A">
+<li><span class="math inline">\(f^{\varepsilon} \in C^{\infty}(\Omega_{\varepsilon})\)</span><br>
+</li>
+<li><span class="math inline">\(f^{\varepsilon} \to f\)</span> a.e. a medida que <span class="math inline">\(\varepsilon \to 0\)</span><br>
+</li>
+<li>Si <span class="math inline">\(f \in C^0(\Omega)\)</span>, entonces <span class="math inline">\(f^{\varepsilon} \to f\)</span> uniformemente en subconjuntos compacto de <span class="math inline">\(\Omega\)</span><br>
+</li>
+<li>Si <span class="math inline">\(p \in [1, \infty)\)</span> y <span class="math inline">\(f \in L^1_{\text{loc}}(\Omega)\)</span>, entonces $f^{} f L^1_{}() $</li>
+</ol>
+</div>
+</div>
 
 
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><span class="math inline">\((\cdot,\cdot)\)</span> se refiere al producto interno<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

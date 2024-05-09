@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ProjectSEE - Notación</title>
+<title>ProjectSEE - Espacio de Sobolev</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ window.Quarto = {
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
-    <a href="https://twitter.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+    <a href="https://twitter.com/FLMM" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -140,7 +140,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Notation.html">Preliminar</a></li><li class="breadcrumb-item"><a href="./Notation.html">Notación</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./WeakDerivate.html">Espacios de Sobolev H^k(Ω) para enteros k ≥ 0</a></li><li class="breadcrumb-item"><a href="./SobolevSpace.html">Espacio de Sobolev</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -163,7 +163,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Notation.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Notation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Notación</span></a>
   </div>
 </li>
@@ -203,7 +203,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./SobolevSpace.html" class="sidebar-item-text sidebar-link">
+  <a href="./SobolevSpace.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Espacio de Sobolev</span></a>
   </div>
 </li>
@@ -271,9 +271,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Notation.html">Preliminar</a></li><li class="breadcrumb-item"><a href="./Notation.html">Notación</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./WeakDerivate.html">Espacios de Sobolev H^k(Ω) para enteros k ≥ 0</a></li><li class="breadcrumb-item"><a href="./SobolevSpace.html">Espacio de Sobolev</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Notación</h1>
+<h1 class="title">Espacio de Sobolev</h1>
 </div>
 
 
@@ -293,20 +293,137 @@ window.Quarto = {
 <div class="hidden">
 <p><span class="math display">\[
 \usepackage{amssymb}
+\usepackage{amsmath}
 \def\R{{\mathbb{R}}}
+\def\Z{{\mathbb{Z}}}
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\def\sen{{\textrm{sen}}}
+\def\cos{{\textrm{cos}}}
+\renewcommand{\qedsymbol}{\blacksquare}
 \]</span></p>
 </div>
-<p><span class="math inline">\(\Omega\)</span> denotará un dominio abierto y suave en <span class="math inline">\(\R^n\)</span>. Recuerde que <span class="math inline">\(M\)</span> es una variedad suave de <span class="math inline">\(\R^n\)</span> de dimensión <span class="math inline">\(n\)</span> si para todo punto <span class="math inline">\(p \in M\)</span> existe una función suave de un abierto <span class="math inline">\(U\)</span> de <span class="math inline">\(\R^n\)</span> a <span class="math inline">\(M\)</span> tal que <span class="math inline">\(f(U)\)</span> contiene a <span class="math inline">\(p\)</span> y la inversa de <span class="math inline">\(f(U)\)</span> a <span class="math inline">\(U\)</span> es suave. Se dice que <span class="math inline">\(\Omega\)</span> es suave si <span class="math inline">\(\partial \Omega\)</span> es una variedad suave.</p>
-<ul>
-<li><span class="math inline">\(C^k(\Omega)\)</span> es el espacio de las funciones que son <span class="math inline">\(k\)</span> veces diferenciables en <span class="math inline">\(\Omega\)</span> para enteros <span class="math inline">\(k \geq 0\)</span></li>
-<li>El supp<span class="math inline">\((f)\)</span> se define por el conjunto <span class="math inline">\(\overline{\{x \in \Omega \mid f(x) \neq 0\}}\)</span> y es llamado el soporte de la función f.</li>
-<li><span class="math inline">\(C_0(\Omega) = \{ u \in C(\Omega) \mid  \mathrm{supp}(u) \text{ es compacto en }  \Omega\}\)</span></li>
-<li><span class="math inline">\(C_0^{\infty}(\Omega) = C^{\infty}(\Omega) \cap C_0(\Omega)\)</span></li>
-<li><span class="math inline">\(A \subset \subset \Omega\)</span> significa que <span class="math inline">\(\overline{A} \subset \Omega\)</span> y <span class="math inline">\(\overline{A}\)</span> es compacto. Es decir, <span class="math inline">\(A\)</span> está compactamente contenido en <span class="math inline">\(\Omega\)</span>.</li>
-</ul>
-<center>
-<img src="Figures/Manifold.png" class="img-fluid" style="width:70.0%">
-</center>
+<div class="definitionbox">
+<div class="definitionbox-header">
+<div class="definitionbox-icon">
+
+</div>
+<p>Definición 2.6</p>
+</div>
+<div class="definitionbox-body">
+<p>Para <span class="math inline">\(\Omega \subset \R^n\)</span> abierto, el conjunto Para enteros <span class="math inline">\(k \geq 0\)</span> y <span class="math inline">\(1 \leq p \leq \infty\)</span>, <span class="math display">\[
+    W^{k, p}(\Omega)=\left\{u \in L_{\mathrm{loc}}^1(\Omega) \mid D^\alpha u \text { existe y está en } L^p(\Omega) \text { para }|\alpha| \leq k\right\}
+    \]</span></p>
+</div>
+</div>
+<div class="definitionbox">
+<div class="definitionbox-header">
+<div class="definitionbox-icon">
+
+</div>
+<p>Definición 2.7</p>
+</div>
+<div class="definitionbox-body">
+<p>Para <span class="math inline">\(\Omega \subset \R^n\)</span> abierto, el conjunto Para <span class="math inline">\(u \in W^{k, p}(\Omega)\)</span> definamos <span class="math display">\[
+\|u\|_{W^{k, p}(\Omega)} = \left(\sum_{|\alpha| \leq k} \|D^\alpha u\|_{L^p(\Omega)}^p \right)^{\frac{1}{p}} \text{ para } 1 \leq p &lt; \infty,
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+\|u\|_{W^{k, \infty}(\Omega)} = \sum_{|\alpha| \leq k} \|D^\alpha u\|_{L^{\infty}(\Omega)}
+\]</span></p>
+<p>La función <span class="math inline">\(\|\cdot\|_{W^{k, p}(\Omega)}\)</span> es norma dado que es la suma finita de la norma de <span class="math inline">\(L^p\)</span>. Para ver esto, note que</p>
+<ol type="1">
+<li><p><span class="math display">\[
+\begin{aligned}
+\|u\|_{W^{k, p}(\Omega)} = 0 &amp; \iff \left(\sum_{|\alpha| \leq k} \|D^\alpha u\|_{L^p(\Omega)}^p \right)^{\frac{1}{p}} \text{ para } 1 \leq p &lt; \infty \\
+&amp; \iff \|u\|^p_{L^p(\Omega)} + \ldots + \|D^{\alpha}u\|^p_{L^p(\Omega)} = 0 \\
+&amp; \iff u = 0 \text{ a.e.}
+\end{aligned}
+\]</span></p></li>
+<li></li>
+</ol>
+<p><span class="math display">\[
+   \begin{aligned}
+   \|\lambda u\|_{W^{k, p}(\Omega)} &amp;= \left(\sum_{|\alpha| \leq k} \|\lambda D^\alpha u\|_{L^p(\Omega)}^p \right)^{\frac{1}{p}} \text{ para } 1 \leq p &lt; \infty  \\
+   &amp;=  \left(\sum_{|\alpha| \leq k} |\lambda|^p \|D^\alpha u\|_{L^p(\Omega)}^p \right)^{\frac{1}{p}}\\
+   &amp;= |\lambda| \left(\sum_{|\alpha| \leq k} \|D^\alpha u\|_{L^p(\Omega)}^p \right)^{\frac{1}{p}} \\
+   &amp;= |\lambda| \|\lambda u\|_{W^{k, p}(\Omega)}
+   \end{aligned}
+   \]</span></p>
+<ol start="3" type="1">
+<li><p>Sean <span class="math inline">\(u, v \in W^{k, p}(\Omega)\)</span>. Si <span class="math inline">\(1 \leq p &lt; \infty\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\|u + v\|_{W^{k, p}(\Omega)} &amp;= \left(\sum_{|\alpha| \leq k} \| D^{\alpha} u + D^{\alpha} v\|_{L^p(\Omega)}^p \right)^{\frac{1}{p}} \\
+&amp; \leq \left(\sum_{|\alpha| \leq k} \left( \| D^{\alpha} u\| + \|D^{\alpha} v\|_{L^p(\Omega)}\right)^p \right)^{\frac{1}{p}} \\
+&amp; \leq \left(\sum_{|\alpha| \leq k} \left( \| D^{\alpha} u\|_{L^p(\Omega)}\right)^p \right)^{\frac{1}{p}} + \left(\sum_{|\alpha| \leq k} (\|D^{\alpha} v\|_{L^p(\Omega)})^p \right)^{\frac{1}{p}} \quad (\textit{Desigualdad de Minkowski}) \\
+&amp;= \|u\|_{W^{k, p}(\Omega)} + \|v\|_{W^{k, p}(\Omega)}
+\end{aligned}
+\]</span></p></li>
+</ol>
+<p>Para el caso <span class="math inline">\(p = \infty\)</span> es completamente análogo.</p>
+</div>
+</div>
+<div class="definitionbox">
+<div class="definitionbox-header">
+<div class="definitionbox-icon">
+
+</div>
+<p>Definición 2.8</p>
+</div>
+<div class="definitionbox-body">
+<p>Una sucesión <span class="math inline">\(u_j \rightarrow u\)</span> en <span class="math inline">\(W^{k, p}(\Omega)\)</span> si <span class="math inline">\(\lim\limits_{j \rightarrow \infty}\left\|u_j-u\right\|_{W^{k, p}(\Omega)}=0\)</span>.</p>
+</div>
+</div>
+<div class="theorembox">
+<div class="theorembox-header">
+<div class="theorembox-icon">
+
+</div>
+<p>Teorema 2.9</p>
+</div>
+<div class="theorembox-body">
+<p><span class="math inline">\(W^{k, p}(\Omega)\)</span> es un espacio de Banach.</p>
+</div>
+</div>
+<p><strong>Demostración:</strong><br>
+Sea <span class="math inline">\(\{u_j\}_{j=1}^{\infty}\)</span> una sucesión de Cauchy en <span class="math inline">\(W^{k, p}(\Omega)\)</span>. Entonces, dado <span class="math inline">\(\varepsilon &gt; 0\)</span> <span class="math display">\[
+    \begin{align*}
+        \norm{u_n - u_m}_{W^{k, p}(\Omega)}  &amp;&lt; \varepsilon, \quad \forall n,m \geq N \\
+        \norm{u_n - u_m}_{L^p(\Omega)}^{p} + \sum_{\abs{\alpha} \leq k} \norm{D^{\alpha} u_n - D^{\alpha} u_m}_{L^p(\Omega)}^{p} &amp;&lt; \varepsilon
+    \end{align*}
+\]</span> Es decir que, <span class="math inline">\(\{u_j\}\)</span> y <span class="math inline">\(\{D^{\alpha}u_j\}\)</span> son de Cauchy en <span class="math inline">\(L^{p}(\Omega)\)</span> dado <span class="math inline">\(L^p\)</span> es completo, existe una función <span class="math inline">\(u^{\alpha} \in L^p(\Omega)\)</span> tal que <span class="math display">\[
+    D^{\alpha}u_j \to u^{\alpha} \in L^p(\Omega), \quad \textit{ para cada } \abs{\alpha} \leq k
+    \]</span> En particular cuando <span class="math inline">\(\alpha=(0, \ldots, 0)\)</span> hacemos <span class="math inline">\(u:=u^{(0, \ldots, 0)}\)</span>, es decir <span class="math inline">\(u_j \rightarrow u\)</span> en <span class="math inline">\(L^p(\Omega)\)</span>. Debemos probar que <span class="math inline">\(u^\alpha=D^\alpha u\)</span>. Observe que por la desigualdad de Hölder tenemos que <span class="math display">\[
+    \begin{align*}
+        \int_{\Omega} (u_j-u)D^{\alpha}\phi &amp;\leq \norm{u_j -u}_{L^p(\Omega)} \norm{D^{\alpha}\phi}_{L^q(\Omega)} \to 0 \\
+        \int_{\Omega} (D^{\alpha}u_j - u^{\alpha}) \phi &amp;\leq \norm{D^{\alpha}u_j - u^{\alpha}}_{L^p(\Omega)}\norm{\phi}_{L^q(\Omega)} \to 0
+    \end{align*}
+    \]</span> Esto nos permite lo siguiente, <span class="math display">\[
+    \begin{align*}
+        \lim\limits_{j \to \infty} \int_{\Omega} u_jD^{\alpha}\phi &amp;= \int_{\Omega} u D^{\alpha}\phi \\
+        \lim\limits_{j \to \infty} \int_{\Omega} D^{\alpha}u_j \phi &amp;= \int_{\Omega} u^{\alpha} \phi
+    \end{align*}
+    \]</span> Ahora, para cada <span class="math inline">\(\phi \in C_0^{\infty}(\Omega)\)</span> <span class="math display">\[
+    \begin{aligned}
+    \int_{\Omega} u D^\alpha \phi d x &amp; =\lim _{j \rightarrow \infty} \int_{\Omega} u_j D^\alpha \phi d x \\
+    &amp; =(-1)^{|\alpha|} \lim _{j \rightarrow \infty} \int_{\Omega} D^\alpha u_j \phi d x \\
+    &amp; =(-1)^{|\alpha|} \int_{\Omega} u^\alpha \phi d x
+    \end{aligned}
+    \]</span> Así, como <span class="math inline">\(D^\alpha u = u^{\alpha}\)</span>, tenemos que <span class="math inline">\(D^\alpha u_j \rightarrow D^\alpha u\)</span> en <span class="math inline">\(L^p(\Omega)\)</span> para cada <span class="math inline">\(|\alpha| \leq k\)</span>, note que <span class="math inline">\(u_j \rightarrow u\)</span> en <span class="math inline">\(W^{k, p}(\Omega)\)</span>. <span class="math inline">\(\qedsymbol\)</span></p>
+<div class="definitionbox">
+<div class="definitionbox-header">
+<div class="definitionbox-icon">
+
+</div>
+<p>Definición 2.10</p>
+</div>
+<div class="definitionbox-body">
+<p>Para los enteros <span class="math inline">\(k \geq 0\)</span> y <span class="math inline">\(p=2\)</span>, definimos <span class="math display">\[
+    H^k(\Omega)=W^{k, 2}(\Omega)
+    \]</span> <span class="math inline">\(H^k(\Omega)\)</span> es un espacio de Hilbert con producto interno dado por <span class="math inline">\((u, v)_{H^k(\Omega)}=\sum_{|\alpha| \leq k}\left(D^\alpha u, D^\alpha v\right)_{L^2(\Omega)}\)</span>.</p>
+</div>
+</div>
 
 
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ProjectSEE - Conocimiento previo</title>
+<title>ProjectSEE - Derivada Débil</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ window.Quarto = {
     </a>
   </div>
         <div class="quarto-navbar-tools tools-end">
-    <a href="https://twitter.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+    <a href="https://twitter.com/FLMM" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -140,7 +140,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Teo.html">Resultados importantes</a></li><li class="breadcrumb-item"><a href="./Teo.html">Conocimiento previo</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./WeakDerivate.html">Espacios de Sobolev H^k(Ω) para enteros k ≥ 0</a></li><li class="breadcrumb-item"><a href="./WeakDerivate.html">Derivada Débil</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -180,7 +180,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Teo.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Teo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conocimiento previo</span></a>
   </div>
 </li>
@@ -197,7 +197,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./WeakDerivate.html" class="sidebar-item-text sidebar-link">
+  <a href="./WeakDerivate.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Derivada Débil</span></a>
   </div>
 </li>
@@ -266,22 +266,14 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#definiciónes" id="toc-definiciónes" class="nav-link active" data-scroll-target="#definiciónes">Definiciónes</a></li>
-  <li><a href="#lemas" id="toc-lemas" class="nav-link" data-scroll-target="#lemas">Lemas</a></li>
-  <li><a href="#teoremas" id="toc-teoremas" class="nav-link" data-scroll-target="#teoremas">Teoremas</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Teo.html">Resultados importantes</a></li><li class="breadcrumb-item"><a href="./Teo.html">Conocimiento previo</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./WeakDerivate.html">Espacios de Sobolev H^k(Ω) para enteros k ≥ 0</a></li><li class="breadcrumb-item"><a href="./WeakDerivate.html">Derivada Débil</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Conocimiento previo</h1>
+<h1 class="title">Derivada Débil</h1>
 </div>
 
 
@@ -301,26 +293,178 @@ window.Quarto = {
 <div class="hidden">
 <p><span class="math display">\[
 \usepackage{amssymb}
-\usepackage{fontawesome5}
-\usepackage{awesomebox}
+\usepackage{amsmath}
 \def\R{{\mathbb{R}}}
+\def\Z{{\mathbb{Z}}}
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\def\sen{{\textrm{sen}}}
+\def\cos{{\textrm{cos}}}
 \]</span></p>
 </div>
-<section id="definiciónes" class="level1">
-<h1>Definiciónes</h1>
 <div class="definitionbox">
 <div class="definitionbox-header">
 <div class="definitionbox-icon">
 
 </div>
-<p>Definición 1.1</p>
+<p>Definicion 2.1</p>
 </div>
 <div class="definitionbox-body">
-Para <span class="math inline">\(\Omega \subset \R^n\)</span> abierto, el conjunto <span class="math display">\[
-    L^{p}_{\mathrm{loc}}(\Omega) = \{u: \Omega \to \R \mid u \in L^{p}(\tilde{\Omega}) \quad \forall \tilde{\Omega} \subset \subset \Omega\}
-    \]</span>
+<p>Para <span class="math inline">\(\Omega \subset \mathbb{R}^n\)</span>, el conjunto</p>
+<p><span class="math display">\[
+C^{\infty}_{0}(\Omega) = \{ u \in C^{\infty}(\Omega) \mid \text{supp}(u) \subset V \subset\subset \Omega \}
+\]</span></p>
+<p>es llamado el conjunto de funciones suaves de soporte compacto. Es más usado <span class="math inline">\(\mathcal{D}(\Omega)\)</span> para denotar <span class="math inline">\(C^{\infty}_{0}(\Omega)\)</span>, y <span class="math inline">\(\mathcal{D}(\Omega)\)</span> es llamada el espacio de las funciones de prueba.</p>
+<p>Para <span class="math inline">\(u \in C^1(\mathbb{R})\)</span>, podemos definir <span class="math inline">\(\frac{du}{dx}\)</span> por la fórmula de integración por partes como</p>
+<p><span class="math display">\[
+\int_{\mathbb{R}} \frac{du}{dx}(x) \phi(x) \, dx = -\int_{\mathbb{R}} u(x) \frac{d\phi}{dx}(x) \, dx, \quad \forall \phi \in C^{\infty}_{0}(\mathbb{R}).
+\]</span></p>
+<p>Note que el lado derecho está bien definido siempre que <span class="math inline">\(u \in L^{1}_{\text{loc}}(\mathbb{R})\)</span>.</p>
+<p>Note que la integral del lado derecho sería cero si estamos fuera del soporte de <span class="math inline">\(\phi\)</span>, entonces si tenemos <span class="math inline">\(\text{supp}(\phi)  \subseteq [a,b]\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    \int_{\mathbb{R}} u(x) \frac{d\phi}{dx}(x) \, dx &amp;= \int_{a}^{b} u(x) \frac{d\phi}{dx}(x) \, dx \\
+    &amp; \leq \left(\int_{a}^{b} |u(x)| \, dx\right) \norm{\frac{d\phi}{dx}}_{C^0}  \quad \text{Desigualdad de Hölder con } p=1, q = \infty \\
+    % \, \text{ la norma de } C^0  \text{ es equivalente a la norma } \infty \\
+    &amp; \leq \left(\int_{a}^{b} |u(x)| \, dx\right) \norm{\phi}_{C^{1}}   
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+<div class="definitionbox">
+<div class="definitionbox-header">
+<div class="definitionbox-icon">
+
+</div>
+<p>Definicion 2.2</p>
+</div>
+<div class="definitionbox-body">
+<p>Un elemento <span class="math inline">\(\alpha \in \Z_{+}^{n}\)</span>(enteros no negativos) es llamado multi-índice. Para <span class="math inline">\(\alpha = (\alpha_1, \ldots, \alpha_n)\)</span>, escribimos <span class="math inline">\(D = \frac{\partial^{\alpha_1} }{\partial x_1^{\alpha_1}} \cdots \frac{\partial^{\alpha_n} }{\partial x_n^{\alpha_n}}\)</span> y <span class="math inline">\(|\alpha| = \alpha_1 + \ldots +  \alpha_n\)</span>.</p>
+</div>
+</div>
+<div class="examplebox">
+<div class="examplebox-header">
+<div class="examplebox-icon">
+
+</div>
+<p>Ejemplo 2.2</p>
+</div>
+<div class="examplebox-body">
+<p>Sea <span class="math inline">\(n=2\)</span>. Si <span class="math inline">\(\abs{\alpha} = 0\)</span>, entonces <span class="math inline">\(\alpha = (0,0)\)</span>; si <span class="math inline">\(\abs{\alpha} = 1\)</span>, entonces <span class="math inline">\(\alpha = (1,0)\)</span> o <span class="math inline">\(\alpha = (0,1)\)</span>. Si <span class="math inline">\(\abs{\alpha} = 2\)</span>, entonces <span class="math inline">\(\alpha = (1,1)\)</span>.</p>
+</div>
+</div>
+<div class="definitionbox">
+<div class="definitionbox-header">
+<div class="definitionbox-icon">
+
+</div>
+<p>Definicion</p>
+</div>
+<div class="definitionbox-body">
+<p>Suponga que <span class="math inline">\(u \in L^{1}_{\mathrm{loc}}(\Omega)\)</span>. Entonces <span class="math inline">\(v^{\alpha} \in L^{1}_{\mathrm{loc}}(\Omega)\)</span> es llamada la <em><span class="math inline">\(\alpha^{th}\)</span> derivada débil</em> de (u), escrita como <span class="math inline">\(v^{\alpha} = D^{\alpha}u\)</span>, si</p>
+<p><span class="math display">\[
+\int_{\Omega} u(x) D^{\alpha} \phi(x) \, dx = (-1)^{|\alpha|} \int_{\Omega} v^{\alpha}(x) \phi(x) \, dx, \quad \forall \phi \in C^{\infty}_{0}(\Omega)
+\]</span></p>
+</div>
+</div>
+<div class="examplebox">
+<div class="examplebox-header">
+<div class="examplebox-icon">
+
+</div>
+<p>Ejemplo 2.3</p>
+</div>
+<div class="examplebox-body">
+<p>Sea <span class="math inline">\(n=1\)</span>, y el conjunto <span class="math inline">\(\Omega = (0,2)\)</span>. Definamos la función</p>
+<p><span class="math display">\[
+u(x) =
+\begin{cases}
+    x, &amp; \quad 0 \leq x &lt;1 \\
+    1, &amp; \quad 1 \leq x \leq 2
+\end{cases}
+\]</span></p>
+<p>Entonces la función</p>
+<p><span class="math display">\[
+v(x) =
+\begin{cases}
+    1, &amp; \quad 0 \leq x &lt;1 \\
+    0, &amp; \quad 1 \leq x \leq 2
+\end{cases}
+\]</span></p>
+<p>es la derivada débil de <span class="math inline">\(u\)</span>. Para ver esto, note que para <span class="math inline">\(\phi \in C_{0}^{\infty}(0,2)\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\int_0^2 u(x) \frac{d \phi}{d x}(x) \, d x &amp; =\int_0^1 x \frac{d \phi}{d x}(x) \, d x+\int_1^2 \frac{d \phi}{d x}(x) \, dx \quad (\text{por linealidad de la integral}) \\
+&amp; =-\int_0^1 \phi(x) \, dx+\left.x \phi\right|_0^1+\left. \phi\right|_1^2 \quad (\text{TFC e integración por partes})\\
+&amp;= -\int_0^1 \phi(x) \, dx - \color{blue} \int_{1}^{2} 0\phi(x) \, dx\\
+&amp;=-\int_0^2 v(x) \phi(x) \, dx
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+<div class="examplebox">
+<div class="examplebox-header">
+<div class="examplebox-icon">
+
+</div>
+<p>Ejemplo 2.4</p>
+</div>
+<div class="examplebox-body">
+<p>Sea <span class="math inline">\(n=1\)</span> y el conjunto <span class="math inline">\(\Omega=(0,2)\)</span>. Defina la función <span class="math display">\[ u(x) =
+    \begin{cases}
+        x, \quad 0 \leq x &lt;1 \\
+        2, \quad 1 \leq x \leq 2
+    \end{cases}
+    \]</span> Entonces ¡la derivada débil no existe!<br>
+Para probarlo, asumamos por contradicción que existe <span class="math inline">\(v \in L_{\mathrm{loc}}^1(\Omega)\)</span> tal que para todo <span class="math inline">\(\phi \in C_0^{\infty}(0,2)\)</span>, <span class="math display">\[
+    \int_0^2 v(x) \phi(x) d x=-\int_0^2 u(x) \frac{d \phi}{d x}(x) d x .
+    \]</span> Entonces <span class="math display">\[\begin{align*}
+    \int_0^2 v(x) \phi(x) d x &amp; =-\int_0^1 x \frac{d \phi}{d x}(x) dx-2 \int_1^2 \frac{d \phi}{d x}(x) dx \quad (\textit{linealidad de la integral}) \\
+    &amp; =\int_0^1 \phi(x) d x-\phi(1)+2 \phi(1) \quad (\textit{ TFC e integración por partes}) \\
+    &amp; =\int_0^1 \phi(x) d x+\phi(1) .
+    \end{align*}\]</span> Suponga que <span class="math inline">\(\{\phi_j\}^{j =1}_{\infty}\)</span> es una sucesión en <span class="math inline">\(C_0^{\infty}(0,2)\)</span> tal que <span class="math display">\[
+    0 \leq \phi_j \leq 1, \quad \phi_j(1)=1, \quad \phi_j(x) \rightarrow 0 \textit{ para } x \neq 1
+    \]</span> Entonces <span class="math display">\[
+    1 = \lim_{j \to \infty} \phi_j(1) =  \lim_{j \to \infty} \left[ \int_0^2 v(x) \phi_j(x) d x-\int_0^1 \phi_j(x) dx \right]
+    \]</span> Estudiemos los límites de las integrales por separado. Note que <span class="math inline">\(v(x) \phi_j(x) \stackrel{a.e.}{\longrightarrow} 0\)</span> y haciendo <span class="math inline">\(g(x) = \abs{v(x)}\)</span>, <span class="math inline">\(\abs{v(x) \phi_j(x)} \leq g(x)\)</span>, luego por T.C.M. tenemos que <span class="math display">\[
+    \lim_{j \to \infty} \int_0^2 v(x) \phi_j(x) dx = 0
+    \]</span> Por otro lado, es claro que <span class="math inline">\(\abs{\phi_j} \leq 1\)</span>, entonces por T.C.M., tenemos que <span class="math display">\[
+    \lim_{j \to \infty} \int_0^1 \phi_j(x) dx = 0
+    \]</span> Así, <span class="math display">\[
+    1 = \lim_{j \to \infty} \phi_j(1) =  \lim_{j \to \infty} \left[ \int_0^2 v(x) \phi_j(x) d x-\int_0^1 \phi_j(x) dx \right] =0
+    \]</span> lo cual es una contradicción, por tanto no existe la derivada débil para <span class="math inline">\(u\)</span>.</p>
+</div>
+</div>
+<div class="definitionbox">
+<div class="definitionbox-header">
+<div class="definitionbox-icon">
+
+</div>
+<p>Definicion 2.4</p>
+</div>
+<div class="definitionbox-body">
+<p>Para <span class="math inline">\(p \in[1, \infty]\)</span>, define <span class="math inline">\(W^{1, p}(\Omega)=\left\{u \in L^p(\Omega) \mid\right.\)</span> la derivada débil existe,<span class="math inline">\(\, Du \in\)</span> <span class="math inline">\(\left.L^p(\Omega)\right\}\)</span>, donde <span class="math inline">\(Du\)</span> es la derivada débil de <span class="math inline">\(u\)</span>.</p>
+</div>
+</div>
+<div class="examplebox">
+<div class="examplebox-header">
+<div class="examplebox-icon">
+
+</div>
+<p>Ejemplo 2.5</p>
+</div>
+<div class="examplebox-body">
+<p>Sea <span class="math inline">\(n=1\)</span> y <span class="math inline">\(\Omega=(0,1)\)</span>. Definamos la función <span class="math inline">\(u(x)=\sin (1 / x)\)</span>. Entonces <span class="math inline">\(u \in L^1(0,1)\)</span>, ahora <span class="math display">\[
+    \begin{align*}
+        \int_{0}^{1} \sen(1/x) \phi^{\prime}(x) &amp;= - \int_{0}^{1} v(x) \phi(x) dx \\
+        \sen(1/x)\phi(x) \lvert_{0}^{1} - \int_{0}^{1} (-\cos(1/x)/x^2) \phi(x)  &amp;= - \int_{0}^{1} v(x) \phi(x) dx \quad (\textit{ Integración por partes })
+    \end{align*}
+\]</span> Por tanto, <span class="math inline">\(Du=-\cos (1 / x) / x^2 \in L_{\text {loc }}^1(0,1)\)</span>, pero <span class="math inline">\(u \notin W^{1, p}(\Omega)\)</span> para cualquier <span class="math inline">\(p\)</span>.</p>
 <center>
-<img src="Figures/Figura1.png" class="img-fluid" style="width:50.0%">
+<img src="Figures/Figura2.png" class="img-fluid" style="width:50.0%">
+</center>
+<center>
+<img src="Figures/Figura3.png" class="img-fluid" style="width:50.0%">
 </center>
 </div>
 </div>
@@ -329,213 +473,51 @@ Para <span class="math inline">\(\Omega \subset \R^n\)</span> abierto, el conjun
 <div class="definitionbox-icon">
 
 </div>
-<p>Definición 1.10</p>
+<p>Definicion 2.5</p>
 </div>
 <div class="definitionbox-body">
-<p>Sea <span class="math inline">\(0&lt;p&lt;\infty\)</span> y sea <span class="math inline">\((X, \mathcal{M}, \mu)\)</span> un espacio de medida. Si <span class="math inline">\(f: X \rightarrow \mathbb{R}\)</span> es una función medible, entonces definimos <span class="math display">\[
-\|f\|_{L^p(X)}:=\left(\int_X|f|^p d x\right)^{\frac{1}{p}} \quad \text { y } \quad\|f\|_{L^{\infty}(X)}:=\operatorname{ess\sup}\limits_{x \in X}|f(x)| .
-\]</span> Observa que <span class="math inline">\(\|f\|_{L^p(X)}\)</span> puede tomar el valor <span class="math inline">\(\infty\)</span>. A menos que se indique lo contrario, normalmente consideraremos que <span class="math inline">\(X\)</span> es un subconjunto suave y abierto <span class="math inline">\(\Omega\)</span> de <span class="math inline">\(\mathbb{R}^n\)</span>, y asumiremos que todas las funciones bajo consideración son medibles.</p>
+<p>En el caso <span class="math inline">\(p=2\)</span>, definimos <span class="math inline">\(H^1(\Omega)=W^{1, p}(\Omega)\)</span></p>
 </div>
 </div>
-<div class="definitionbox">
-<div class="definitionbox-header">
-<div class="definitionbox-icon">
+<div class="examplebox">
+<div class="examplebox-header">
+<div class="examplebox-icon">
 
 </div>
-<p>Definición 1.11</p>
+<p>Ejemplo 2.5</p>
 </div>
-<div class="definitionbox-body">
-<p>El espacio <span class="math inline">\(L^p(X)\)</span> es el conjunto <span class="math display">\[
-L^p(X)=\left\{f: X \rightarrow \mathbb{R} \mid\|f\|_{L^p(X)}&lt;\infty\right\} .
-\]</span> El espacio <span class="math inline">\(L^p(X)\)</span> satisface las siguientes propiedades de espacio vectorial:</p>
-<ol type="1">
-<li>Para cada <span class="math inline">\(\alpha \in \mathbb{R}\)</span>, si <span class="math inline">\(f \in L^p(X)\)</span> entonces <span class="math inline">\(\alpha f \in L^p(X)\)</span>;</li>
-<li>Si <span class="math inline">\(f, g \in L^p(X)\)</span>, entonces <span class="math display">\[
-|f+g|^p \leq 2^{p-1}\left(|f|^p+|g|^p\right),
-\]</span> de manera que <span class="math inline">\(f+g \in L^p(X)\)</span>.</li>
-<li>La desigualdad del triángulo es válida si <span class="math inline">\(p \geq 1\)</span>.</li>
-</ol>
-</div>
-</div>
-<div class="definitionbox">
-<div class="definitionbox-header">
-<div class="definitionbox-icon">
-
-</div>
-<p>Definición 1.13 Regularizadores</p>
-</div>
-<div class="definitionbox-body">
-<p>Si <span class="math inline">\(f \in L^1_{\text{loc}}(\Omega)\)</span>, se define el regularizador como <span class="math display">\[f^{\varepsilon} = n_{\varepsilon} * f \, \text{en } \Omega_{\varepsilon}, \]</span> Así, <span class="math display">\[f^{\varepsilon} = \int_{\Omega} \eta_{\varepsilon}(x-y) f(y)dy = \int_{B(0, \varepsilon)} \eta_{\varepsilon}(x-y) f(y)dy \, \forall x \in \Omega_{\varepsilon}\]</span></p>
+<div class="examplebox-body">
+<p>Sea <span class="math inline">\(\Omega=B(0,1) \subset \mathbb{R}^2\)</span> y el conjunto <span class="math inline">\(u(x)=|x|^{-\alpha}\)</span>. Queremos determinar los valores de <span class="math inline">\(\alpha\)</span> para los cuales <span class="math inline">\(u \in H^1(\Omega)\)</span>.<br>
+Dado que <span class="math inline">\(|x|^{-\alpha}=\left(\sum_{i=1}^2x_i x_i\right)^{-\alpha / 2}\)</span>, entonces <span class="math inline">\(\partial_{x_i}|x|^{-\alpha}=-\alpha|x|^{-\alpha-2} x_i\)</span> está bien definida fuera de <span class="math inline">\(x=0\)</span>.<br>
+Mostramos que <span class="math inline">\(u \in L_{\text {loc }}^1(\Omega)\)</span>. Para ver esto, note que <span class="math inline">\(\int_{\Omega}|x|^{-\alpha} d x=\int_0^{2 \pi} \int_0^1 r^{-\alpha}rdrd \theta&lt;\infty\)</span> (teorema del cambio de variable) siempre que <span class="math inline">\(\alpha&lt;2\)</span>.<br>
+Definamos el vector <span class="math inline">\(v(x)=-\alpha|x|^{-\alpha-2} x\)</span> (de modo que cada componente viene dada por <span class="math inline">\(v_i(x)= -\alpha|x|^{-\alpha-2} x_i)\)</span> Tenemos que probrar que <span class="math display">\[
+    \int_{B(0,1)} u(x) D \phi(x) d x=-\int_{B(0,1)} v(x) \phi(x) d x \quad \forall \phi \in C_0^{\infty}(B(0,1)) .
+    \]</span> Para ver esto, sea <span class="math inline">\(\Omega_\delta=B(0,1)-B(0, \delta)\)</span>, además <span class="math inline">\(n\)</span> denota la normal unitaria a <span class="math inline">\(\partial \Omega_\delta\)</span> (apuntando hacia el origen). La integración por partes da como resultado <span class="math display">\[
+    \int_{\Omega_\delta}|x|^{-\alpha} D \phi(x) d x=\int_0^{2 \pi} \delta^{-\alpha} \phi(x) n(x) \delta d \theta+\alpha \int_{\Omega_\delta}|x|^{-\alpha-2} x \phi(x) d x .
+    \]</span> Desde que <span class="math inline">\(\lim _{\delta \rightarrow 0} \delta^{1-\alpha} \int_0^{2 \pi} \phi(x) n(x) d \theta=0\)</span> si <span class="math inline">\(\alpha&lt;1\)</span>, vemos que <span class="math display">\[
+    \lim _{\delta \rightarrow 0} \int_{\Omega_\delta}|x|^{-\alpha} D \phi(x) d x=\lim _{\delta \rightarrow 0} \alpha \int_{\Omega_\delta}|x|^{-\alpha-2} x \phi(x) d x
+    \]</span> Dado que <span class="math inline">\(\int_0^{2 \pi} \int_0^1 r^{-\alpha-1} r d r d \theta&lt;\infty\)</span> si <span class="math inline">\(\alpha&lt;1\)</span>, por el T.C.D tenemos que <span class="math inline">\(v\)</span> es la derivada débil de <span class="math inline">\(u\)</span>.</p>
 </div>
 </div>
-<div class="definitionbox">
-<div class="definitionbox-header">
-<div class="definitionbox-icon">
-
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>Definición 1.14 Regularizadores en <span class="math inline">\(L^1\)</span></p>
-</div>
-<div class="definitionbox-body">
-<p>Definamos <span class="math inline">\(\eta \in C^{\infty}(\R^n)\)</span> por <span class="math display">\[ \eta(x) :=
-    \begin{cases}
-        Ce^{(|x|^2-1)^{-1}}, \text{ si } |x| &lt;1, \\
-        0, \text{ si } |x| \geq 1
-    \end{cases}
-    \]</span> Con cierta constante <span class="math inline">\(C\)</span> tal que <span class="math inline">\(\displaystyle \int \limits_{\R^n} \eta(x) dx = 1\)</span>.<br>
-Para <span class="math inline">\(\varepsilon &gt;0\)</span>, la sucesión de regularizadores estándar en <span class="math inline">\(\R^n\)</span> es definida por <span class="math display">\[ \eta_{\varepsilon}(x) = \varepsilon^{-n} \eta(x/\varepsilon)\]</span> Satisfaciendo que <span class="math inline">\(\displaystyle \int \limits_{\R^n} \eta_{\varepsilon}(x) dx = 1\)</span> y <span class="math inline">\(\text{supp}(\eta_{\varepsilon}) \subset \overline{B(0, \varepsilon)}\)</span></p>
+<div class="callout-title-container flex-fill">
+Observación
 </div>
 </div>
-</section>
-<section id="lemas" class="level1">
-<h1>Lemas</h1>
-<div class="lemmabox">
-<div class="lemmabox-header">
-<div class="lemmabox-icon">
-
-</div>
-<p>Lema 1.4 T.C.M</p>
-</div>
-<div class="lemmabox-body">
-<p>Si <span class="math inline">\(f_n \in L^1(X)\)</span>, <span class="math inline">\(0 \leq f_1(x) \leq f_2(x) \leq \cdots\)</span>, y <span class="math inline">\(\left\|f_n\right\|_{L^1(X)} \leq C&lt;\infty\)</span>, entonces <span class="math inline">\(\lim _{n \rightarrow \infty} f_n(x)=f(x)\)</span> con <span class="math inline">\(f \in L^1(X)\)</span> y <span class="math inline">\(\left\|f_n-f\right\|_{L^1} \rightarrow 0\)</span> conforme <span class="math inline">\(n \rightarrow 0\)</span>.</p>
-</div>
-</div>
-<div class="lemmabox">
-<div class="lemmabox-header">
-<div class="lemmabox-icon">
-
-</div>
-<p>Lema 1.5 T.C.D</p>
-</div>
-<div class="lemmabox-body">
-<p>Si <span class="math inline">\(f_n \in L^1(X)\)</span>, <span class="math inline">\(\lim _{n \rightarrow \infty} f_n(x)=f(x)\)</span> casi en todas partes, y si <span class="math inline">\(\exists g \in L^1(X)\)</span> tal que <span class="math inline">\(\left|f_n(x)\right| \leq |g(x)|\)</span> casi en todas partes para todo <span class="math inline">\(n\)</span>, entonces <span class="math inline">\(f \in L^1(X)\)</span> y <span class="math inline">\(\left\|f_n-f\right\|_{L^1} \rightarrow 0\)</span>.</p>
-</div>
-</div>
-<div class="lemmabox">
-<div class="lemmabox-header">
-<div class="lemmabox-icon">
-
-</div>
-<p>Lema 1.8 Fatou</p>
-</div>
-<div class="lemmabox-body">
-<p>Supongamos que la secuencia <span class="math inline">\(f_n: \Omega \rightarrow \overline{\mathbb{R}}\)</span> y <span class="math inline">\(f_n \geq 0\)</span>. Entonces, <span class="math display">\[
-\int_{\Omega} \liminf _{n \rightarrow \infty} f_n(x) d x \leq \liminf _{n \rightarrow \infty} \int_{\Omega} f_n(x) d x
-\]</span></p>
-</div>
-</div>
-</section>
-<section id="teoremas" class="level1">
-<h1>Teoremas</h1>
-<div class="theorembox">
-<div class="theorembox-header">
-<div class="theorembox-icon">
-
-</div>
-<p>Teorema 1.2 Desigualdad de Hölder</p>
-</div>
-<div class="theorembox-body">
-<p>Supongamos que <span class="math inline">\(1 \leq p \leq \infty\)</span> y <span class="math inline">\(1&lt;q&lt;\infty\)</span> con <span class="math inline">\(\frac{1}{p}+\frac{1}{q}=1\)</span>. Si <span class="math inline">\(f \in L^p\)</span> y <span class="math inline">\(g \in L^q\)</span>, entonces <span class="math inline">\(f g \in L^1\)</span>. Además, <span class="math display">\[
-\|f g\|_{L^1} \leq \|f\|_{L^p}\|g\|_{L^q}.
-\]</span></p>
-<p>Observa que si <span class="math inline">\(p=q=2\)</span>, entonces esto es la desigualdad de Cauchy-Schwarz ya que <span class="math inline">\(\|f g\|_{L^1}=\left|(f, g)_{L^2}\right|\)</span>. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-</div>
-</div>
-<div class="theorembox">
-<div class="theorembox-header">
-<div class="theorembox-icon">
-
-</div>
-<p>Teorema 1.3 Desigualdad de Minkowski</p>
-</div>
-<div class="theorembox-body">
-<p>Si <span class="math inline">\(1 \leq p \leq \infty\)</span> y <span class="math inline">\(f, g \in L^p\)</span>, entonces <span class="math display">\[
-\|f+g\|_{L^p} \leq \|f\|_{L^p}+\|g\|_{L^p}.
-\]</span></p>
-</div>
-</div>
-<div class="theorembox">
-<div class="theorembox-header">
-<div class="theorembox-icon">
-
-</div>
-<p>Teorema 1.6</p>
-</div>
-<div class="theorembox-body">
-<p>El espacio <span class="math inline">\(L^p\)</span> es completo con <span class="math inline">\(p \leq \infty\)</span>.</p>
-</div>
-</div>
-<div class="theorembox">
-<div class="theorembox-header">
-<div class="theorembox-icon">
-
-</div>
-<p>Teorema 1.7 Teorema de Convergencia Monótona</p>
-</div>
-<div class="theorembox-body">
-<p>Sea <span class="math inline">\(f_n: \Omega \rightarrow \mathbb{R} \cup\{+\infty\}\)</span> una secuencia de funciones, <span class="math inline">\(f_n \geq 0\)</span>, y supongamos que la secuencia <span class="math inline">\(f_n\)</span> es monótonamente creciente, es decir, <span class="math display">\[
-f_1 \leq f_2 \leq f_3 \leq \cdots
-\]</span> Entonces, <span class="math display">\[
-\lim _{n \rightarrow \infty} \int_{\Omega} f_n(x) d x=\int_{\Omega} \lim _{n \rightarrow \infty} f_n(x) d x
-\]</span></p>
-</div>
-</div>
-<div class="theorembox">
-<div class="theorembox-header">
-<div class="theorembox-icon">
-
-</div>
-<p>Teorema 1.9 Teorema de Convergencia Dominada</p>
-</div>
-<div class="theorembox-body">
-<p>Supongamos que la secuencia <span class="math inline">\(f_n: \Omega \rightarrow \mathbb{R}\)</span>, <span class="math inline">\(f_n(x) \rightarrow f(x)\)</span> casi en todas partes (con respecto a la medida de Lebesgue), y además, <span class="math inline">\(\left|f_n\right| \leq g \in L^1(\Omega)\)</span>. Entonces <span class="math inline">\(f \in L^1(\Omega)\)</span> y <span class="math display">\[
-\lim _{n \rightarrow \infty} \int_{\Omega} f_n(x) d x=\int_{\Omega} f(x) d x .
-\]</span> De manera equivalente, <span class="math inline">\(f_n \rightarrow f\)</span> en <span class="math inline">\(L^1(\Omega)\)</span>, por lo que <span class="math inline">\(\lim _{n \rightarrow \infty}\left\|f_n-f\right\|_{L^1(\Omega)}=0\)</span></p>
-</div>
-</div>
-<div class="theorembox">
-<div class="theorembox-header">
-<div class="theorembox-icon">
-
-</div>
-<p>Teorema 1.12 Teorema fundamental del calculo de variaciones</p>
-</div>
-<div class="theorembox-body">
-<p>Si <span class="math inline">\(f \in L_{\text {loc }}^1(\Omega)\)</span> satisfaciendo que <span class="math display">\[
-    \int_{\Omega} f \varphi d x=0
-    \]</span><br>
-para cada <span class="math inline">\(\varphi \in C_0^{\infty}(\Omega)\)</span>, entonces <span class="math inline">\(f=0\)</span> a.e en <span class="math inline">\(\Omega\)</span>.</p>
-</div>
-</div>
-<div class="theorembox">
-<div class="theorembox-header">
-<div class="theorembox-icon">
-
-</div>
-<p>Teorema 1.15 Regularizadores en <span class="math inline">\(L^p(\Omega)\)</span></p>
-</div>
-<div class="theorembox-body">
-<ol type="A">
-<li><span class="math inline">\(f^{\varepsilon} \in C^{\infty}(\Omega_{\varepsilon})\)</span><br>
-</li>
-<li><span class="math inline">\(f^{\varepsilon} \to f\)</span> a.e. a medida que <span class="math inline">\(\varepsilon \to 0\)</span><br>
-</li>
-<li>Si <span class="math inline">\(f \in C^0(\Omega)\)</span>, entonces <span class="math inline">\(f^{\varepsilon} \to f\)</span> uniformemente en subconjuntos compacto de <span class="math inline">\(\Omega\)</span><br>
-</li>
-<li>Si <span class="math inline">\(p \in [1, \infty)\)</span> y <span class="math inline">\(f \in L^1_{\text{loc}}(\Omega)\)</span>, entonces $f^{} f L^1_{}() $</li>
-</ol>
+<div class="callout-body-container callout-body">
+<p>Note que si la derivada débil existe, entonces es única. Para ver esto, suponga que <span class="math inline">\(v^{\alpha}\)</span> y <span class="math inline">\(\tilde{v}^{\alpha} \in L^1_{\textit{loc}}(\Omega)\)</span> tal que <span class="math display">\[
+    \int_{\Omega} u(x) D^{\alpha} \phi(x)dx = (-1)^{\abs{\alpha}} \int_{\Omega} v^{\alpha}(x)\phi(x)dx = (-1)^{\abs{\alpha}} \int_{\Omega} \tilde{v}^{\alpha}(x)\phi(x)dx, \quad \forall \phi \in C^{\infty}_{0}(\Omega)
+    \]</span> Entonces <span class="math inline">\(\int_{\Omega}\left(v^{\alpha}-\tilde{v}^{\alpha}\right) \phi d x=0\)</span> para todo <span class="math inline">\(\phi \in C_0^{\infty}(\Omega)\)</span>, y usando el teorema de la sección de preliminares tenemos que <span class="math inline">\(v^{\alpha}=\tilde{v}^{\alpha}\)</span> a.e.</p>
 </div>
 </div>
 
 
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p><span class="math inline">\((\cdot,\cdot)\)</span> se refiere al producto interno<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
