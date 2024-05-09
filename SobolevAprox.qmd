@@ -1,0 +1,70 @@
+---
+title: Aproximación de W^{k,p}(Ω) mediante funciones suaves
+---
+::: {.hidden}
+$$
+\usepackage{amssymb}
+\usepackage{amsmath}
+\def\R{{\mathbb{R}}}
+\def\Z{{\mathbb{Z}}}
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\def\sen{{\textrm{sen}}}
+\def\cos{{\textrm{cos}}}
+\renewcommand{\qedsymbol}{\blacksquare}
+$$
+
+:::
+
+Recuerde que $\Omega_\epsilon=\{x \in \Omega \mid \operatorname{dist}(x, \partial \Omega)>\epsilon\}$.
+
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 4.1
+::::
+
+::::{.definitionbox-body}
+
+Una secuencia $u_j \rightarrow u$ en $W_{\mathrm{loc}}^{k, p}(\Omega)$ si $u_j \rightarrow u$ en $W^{k, p}(\tilde{\Omega})$ para cada $\tilde{\Omega} \subset \subset \Omega$.
+
+::::
+
+:::
+
+:::{.theorembox}
+
+::::{.theorembox-header}
+:::::{.theorembox-icon}
+:::::
+Definición
+::::
+
+::::{.theorembox-body}
+
+Para enteros $k \geq 0$ y $1 \leq p<\infty$, sea
+$$
+u^\epsilon=\eta_\epsilon * u \text { en } \Omega_\epsilon,
+$$
+donde $\eta_\epsilon$ es el suavizador estándar definido Preliminares. Entonces  
+
+A$)$ $u^\epsilon \in C^{\infty}\left(\Omega_\epsilon\right)$ para cada $\epsilon>0$, y  
+B$)$ $u^\epsilon \rightarrow u$ en $W_{\mathrm{loc}}^{k, p}(\Omega)$ cuando $\epsilon \rightarrow 0$.
+::::
+
+:::
+
+**Demostración:**  
+Parte (A) se prueba en el Teorema 1.15. A continuación, sea $v^\alpha$ la $\alpha$-ésima derivada débil de $u$. Para probar la parte (B), mostramos que $D^\alpha u^\epsilon=\eta_\epsilon * v^\alpha$ en $\Omega_\epsilon$. Para $x \in \Omega_\epsilon$,
+    $$
+    \begin{aligned}
+    D^\alpha u^\epsilon(x) & =D^\alpha \int_{\Omega} \eta_\epsilon(x-y) u(y) d y \\
+    & =\int_{\Omega} D_x^\alpha \eta_\epsilon(x-y) u(y) d y \\
+    & =(-1)^{|\alpha|} \int_{\Omega} D_y^\alpha \eta_\epsilon(x-y) u(y) d y \\
+    & =\int_{\Omega} \eta_\epsilon(x-y) v^\alpha(y) d y=\left(\eta_\epsilon * v^\alpha\right)(x)
+    \end{aligned}
+    $$
+    Por la parte (D) del Teorema $1.28, D^\alpha u^\epsilon \rightarrow v^\alpha$ en $L_{\mathrm{loc}}^p(\Omega)$. $\qedsymbol$

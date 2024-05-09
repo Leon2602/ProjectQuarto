@@ -1,0 +1,33 @@
+{
+  "index.qmd": {
+    "index.html": "af670a9e"
+  },
+  "about.qmd": {
+    "about.html": "6b3a63f5"
+  },
+  "prueb.qmd": {
+    "prueb.html": "e157be5b",
+    "prueb.tex": "1e9d6b9e"
+  },
+  "Notation.qmd": {
+    "Notation.html": "3d58347b"
+  },
+  "Teo.qmd": {
+    "Teo.html": "4536f8b8"
+  },
+  "WeakDerivate.qmd": {
+    "WeakDerivate.html": "efbb2810"
+  },
+  "SobolevSpace.qmd": {
+    "SobolevSpace.html": "e054a20e"
+  },
+  "SobolevEmbeb.qmd": {
+    "SobolevEmbeb.html": "cd68c98c"
+  },
+  "SobolevAprox.qmd": {
+    "SobolevAprox.html": "f95da1ae"
+  },
+  "HolderSpace.qmd": {
+    "HolderSpace.html": "3b1f3513"
+  }
+}

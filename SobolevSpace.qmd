@@ -1,0 +1,191 @@
+---
+title: Espacio de Sobolev
+---
+::: {.hidden}
+$$
+\usepackage{amssymb}
+\usepackage{amsmath}
+\def\R{{\mathbb{R}}}
+\def\Z{{\mathbb{Z}}}
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\def\sen{{\textrm{sen}}}
+\def\cos{{\textrm{cos}}}
+\renewcommand{\qedsymbol}{\blacksquare}
+$$
+:::
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 2.6
+::::
+
+::::{.definitionbox-body}
+Para $\Omega \subset \R^n$ abierto, el conjunto 
+Para enteros $k \geq 0$ y $1 \leq p \leq \infty$,
+    $$
+    W^{k, p}(\Omega)=\left\{u \in L_{\mathrm{loc}}^1(\Omega) \mid D^\alpha u \text { existe y está en } L^p(\Omega) \text { para }|\alpha| \leq k\right\}
+    $$  
+
+::::
+
+:::
+
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 2.7
+::::
+
+::::{.definitionbox-body}
+Para $\Omega \subset \R^n$ abierto, el conjunto 
+ Para $u \in W^{k, p}(\Omega)$ definamos
+    $$
+\|u\|_{W^{k, p}(\Omega)} = \left(\sum_{|\alpha| \leq k} \|D^\alpha u\|_{L^p(\Omega)}^p \right)^{\frac{1}{p}} \text{ para } 1 \leq p < \infty,
+$$
+
+y
+
+$$
+\|u\|_{W^{k, \infty}(\Omega)} = \sum_{|\alpha| \leq k} \|D^\alpha u\|_{L^{\infty}(\Omega)}
+$$
+
+La función $\|\cdot\|_{W^{k, p}(\Omega)}$ es norma dado que es la suma finita de la norma de $L^p$. Para ver esto, note que
+
+1. 
+
+   $$
+   \begin{aligned}
+   \|u\|_{W^{k, p}(\Omega)} = 0 & \iff \left(\sum_{|\alpha| \leq k} \|D^\alpha u\|_{L^p(\Omega)}^p \right)^{\frac{1}{p}} \text{ para } 1 \leq p < \infty \\
+   & \iff \|u\|^p_{L^p(\Omega)} + \ldots + \|D^{\alpha}u\|^p_{L^p(\Omega)} = 0 \\
+   & \iff u = 0 \text{ a.e.}
+   \end{aligned}
+   $$
+
+2.  
+
+   $$
+   \begin{aligned}
+   \|\lambda u\|_{W^{k, p}(\Omega)} &= \left(\sum_{|\alpha| \leq k} \|\lambda D^\alpha u\|_{L^p(\Omega)}^p \right)^{\frac{1}{p}} \text{ para } 1 \leq p < \infty  \\
+   &=  \left(\sum_{|\alpha| \leq k} |\lambda|^p \|D^\alpha u\|_{L^p(\Omega)}^p \right)^{\frac{1}{p}}\\
+   &= |\lambda| \left(\sum_{|\alpha| \leq k} \|D^\alpha u\|_{L^p(\Omega)}^p \right)^{\frac{1}{p}} \\
+   &= |\lambda| \|\lambda u\|_{W^{k, p}(\Omega)}
+   \end{aligned}
+   $$
+
+3. Sean $u, v \in W^{k, p}(\Omega)$. Si $1 \leq p < \infty$,
+
+   $$
+   \begin{aligned}
+   \|u + v\|_{W^{k, p}(\Omega)} &= \left(\sum_{|\alpha| \leq k} \| D^{\alpha} u + D^{\alpha} v\|_{L^p(\Omega)}^p \right)^{\frac{1}{p}} \\
+   & \leq \left(\sum_{|\alpha| \leq k} \left( \| D^{\alpha} u\| + \|D^{\alpha} v\|_{L^p(\Omega)}\right)^p \right)^{\frac{1}{p}} \\
+   & \leq \left(\sum_{|\alpha| \leq k} \left( \| D^{\alpha} u\|_{L^p(\Omega)}\right)^p \right)^{\frac{1}{p}} + \left(\sum_{|\alpha| \leq k} (\|D^{\alpha} v\|_{L^p(\Omega)})^p \right)^{\frac{1}{p}} \quad (\textit{Desigualdad de Minkowski}) \\
+   &= \|u\|_{W^{k, p}(\Omega)} + \|v\|_{W^{k, p}(\Omega)}
+   \end{aligned}
+   $$
+
+Para el caso $p = \infty$ es completamente análogo.
+
+::::
+
+:::
+
+
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 2.8
+::::
+
+::::{.definitionbox-body}
+
+Una sucesión $u_j \rightarrow u$ en $W^{k, p}(\Omega)$ si $\lim\limits_{j \rightarrow \infty}\left\|u_j-u\right\|_{W^{k, p}(\Omega)}=0$. 
+
+::::
+
+:::
+
+
+:::{.theorembox}
+
+::::{.theorembox-header}
+:::::{.theorembox-icon}
+:::::
+Teorema 2.9
+::::
+
+::::{.theorembox-body}
+
+$W^{k, p}(\Omega)$ es un espacio de Banach.
+
+::::
+
+:::
+
+**Demostración:**  
+Sea $\{u_j\}_{j=1}^{\infty}$ una sucesión de Cauchy en $W^{k, p}(\Omega)$. Entonces, dado $\varepsilon > 0$
+$$
+    \begin{align*}
+        \norm{u_n - u_m}_{W^{k, p}(\Omega)}  &< \varepsilon, \quad \forall n,m \geq N \\
+        \norm{u_n - u_m}_{L^p(\Omega)}^{p} + \sum_{\abs{\alpha} \leq k} \norm{D^{\alpha} u_n - D^{\alpha} u_m}_{L^p(\Omega)}^{p} &< \varepsilon
+    \end{align*}
+$$
+    Es decir que, $\{u_j\}$ y $\{D^{\alpha}u_j\}$ son de Cauchy en $L^{p}(\Omega)$
+    dado $L^p$ es completo, existe una función $u^{\alpha} \in L^p(\Omega)$ tal que 
+    $$
+    D^{\alpha}u_j \to u^{\alpha} \in L^p(\Omega), \quad \textit{ para cada } \abs{\alpha} \leq k
+    $$
+    En particular cuando $\alpha=(0, \ldots, 0)$ hacemos $u:=u^{(0, \ldots, 0)}$, es decir $u_j \rightarrow u$ en $L^p(\Omega)$. Debemos probar que $u^\alpha=D^\alpha u$.
+    Observe que por la desigualdad de Hölder tenemos que
+    $$
+    \begin{align*}
+        \int_{\Omega} (u_j-u)D^{\alpha}\phi &\leq \norm{u_j -u}_{L^p(\Omega)} \norm{D^{\alpha}\phi}_{L^q(\Omega)} \to 0 \\
+        \int_{\Omega} (D^{\alpha}u_j - u^{\alpha}) \phi &\leq \norm{D^{\alpha}u_j - u^{\alpha}}_{L^p(\Omega)}\norm{\phi}_{L^q(\Omega)} \to 0
+    \end{align*}
+    $$
+    Esto nos permite lo siguiente,
+    $$
+    \begin{align*}
+        \lim\limits_{j \to \infty} \int_{\Omega} u_jD^{\alpha}\phi &= \int_{\Omega} u D^{\alpha}\phi \\
+        \lim\limits_{j \to \infty} \int_{\Omega} D^{\alpha}u_j \phi &= \int_{\Omega} u^{\alpha} \phi
+    \end{align*}
+    $$
+    Ahora, para cada $\phi \in C_0^{\infty}(\Omega)$
+    $$
+    \begin{aligned}
+    \int_{\Omega} u D^\alpha \phi d x & =\lim _{j \rightarrow \infty} \int_{\Omega} u_j D^\alpha \phi d x \\
+    & =(-1)^{|\alpha|} \lim _{j \rightarrow \infty} \int_{\Omega} D^\alpha u_j \phi d x \\
+    & =(-1)^{|\alpha|} \int_{\Omega} u^\alpha \phi d x
+    \end{aligned}
+    $$
+    Así, como $D^\alpha u = u^{\alpha}$, tenemos que  $D^\alpha u_j \rightarrow D^\alpha u$ en $L^p(\Omega)$ para cada $|\alpha| \leq k$, note que $u_j \rightarrow u$ en $W^{k, p}(\Omega)$. $\qedsymbol$
+
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 2.10
+::::
+
+::::{.definitionbox-body}
+
+Para los enteros $k \geq 0$ y $p=2$, definimos
+    $$
+    H^k(\Omega)=W^{k, 2}(\Omega)
+    $$
+    $H^k(\Omega)$ es un espacio de Hilbert con producto interno dado por $(u, v)_{H^k(\Omega)}=\sum_{|\alpha| \leq k}\left(D^\alpha u, D^\alpha v\right)_{L^2(\Omega)}$.
+
+::::
+
+:::

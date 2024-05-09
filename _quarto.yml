@@ -1,0 +1,55 @@
+project:
+  type: website
+
+website:
+  title: "ProjectSEE"
+  navbar:
+    logo: Figures/logo_espol.png
+    background: dark
+    tools:
+      - icon: twitter
+        href: https://twitter.com/_FLMM_
+      - icon: github
+        menu:
+          - text: Source Code
+            href:  https://code.com
+          - text: Report a Bug
+            href:  https://bugs.com
+  sidebar:
+    style: "docked"
+    alignment: "center"
+    search: false
+    background: light
+    contents:
+      - section: "Preliminar"
+        contents:
+          - Notation.qmd
+      - section: "Resultados importantes"
+        contents:
+          - Teo.qmd
+      - section: "Espacios de Sobolev H^k(Ω) para enteros k ≥ 0"
+        contents:
+          - WeakDerivate.qmd
+          - SobolevSpace.qmd
+      - section: "Teorema del embebimiento"
+        contents:
+          - SobolevEmbeb.qmd
+      - section: "Aproximación mediante funciones suaves"
+        contents:
+          - SobolevAprox.qmd
+      - section: "Espacios de Hölder"
+        contents:
+          - HolderSpace.qmd
+
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+      
+
+
+

@@ -1,0 +1,347 @@
+---
+title: Conocimiento previo
+---
+::: {.hidden}
+$$
+\usepackage{amssymb}
+\usepackage{fontawesome5}
+\usepackage{awesomebox}
+\def\R{{\mathbb{R}}}
+$$
+:::
+
+
+# Definiciónes
+
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 1.1
+::::
+
+::::{.definitionbox-body}
+Para $\Omega \subset \R^n$ abierto, el conjunto 
+    $$
+    L^{p}_{\mathrm{loc}}(\Omega) = \{u: \Omega \to \R \mid u \in L^{p}(\tilde{\Omega}) \quad \forall \tilde{\Omega} \subset \subset \Omega\}
+    $$
+<center>
+![](Figures/Figura1.png){width=50%}
+</center>
+::::
+
+:::
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 1.10
+::::
+
+::::{.definitionbox-body}
+Sea $0<p<\infty$ y sea $(X, \mathcal{M}, \mu)$ un espacio de medida. Si $f: X \rightarrow \mathbb{R}$ es una función medible, entonces definimos
+$$
+\|f\|_{L^p(X)}:=\left(\int_X|f|^p d x\right)^{\frac{1}{p}} \quad \text { y } \quad\|f\|_{L^{\infty}(X)}:=\operatorname{ess\sup}\limits_{x \in X}|f(x)| .
+$$
+Observa que $\|f\|_{L^p(X)}$ puede tomar el valor $\infty$. A menos que se indique lo contrario, normalmente consideraremos que $X$ es un subconjunto suave y abierto $\Omega$ de $\mathbb{R}^n$, y asumiremos que todas las funciones bajo consideración son medibles.
+::::
+
+:::
+
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 1.11
+::::
+
+::::{.definitionbox-body}
+   El espacio $L^p(X)$ es el conjunto
+$$
+L^p(X)=\left\{f: X \rightarrow \mathbb{R} \mid\|f\|_{L^p(X)}<\infty\right\} .
+$$
+El espacio $L^p(X)$ satisface las siguientes propiedades de espacio vectorial:
+
+1. Para cada $\alpha \in \mathbb{R}$, si $f \in L^p(X)$ entonces $\alpha f \in L^p(X)$; 
+2. Si $f, g \in L^p(X)$, entonces
+$$
+|f+g|^p \leq 2^{p-1}\left(|f|^p+|g|^p\right),
+$$ de manera que $f+g \in L^p(X)$.
+3. La desigualdad del triángulo es válida si $p \geq 1$.
+
+::::
+
+:::
+
+
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 1.13 Regularizadores
+::::
+
+::::{.definitionbox-body}
+
+Si $f \in L^1_{\text{loc}}(\Omega)$, se define el regularizador como 
+    $$f^{\varepsilon} = n_{\varepsilon} * f \, \text{en } \Omega_{\varepsilon}, $$
+    Así, 
+    $$f^{\varepsilon} = \int_{\Omega} \eta_{\varepsilon}(x-y) f(y)dy = \int_{B(0, \varepsilon)} \eta_{\varepsilon}(x-y) f(y)dy \, \forall x \in \Omega_{\varepsilon}$$
+
+::::
+
+:::
+
+
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 1.14 Regularizadores en $L^1$
+::::
+
+::::{.definitionbox-body}
+
+Definamos $\eta \in C^{\infty}(\R^n)$ por
+    $$ \eta(x) :=
+    \begin{cases}
+        Ce^{(|x|^2-1)^{-1}}, \text{ si } |x| <1, \\
+        0, \text{ si } |x| \geq 1
+    \end{cases}
+    $$
+    Con cierta constante $C$ tal que $\displaystyle \int \limits_{\R^n} \eta(x) dx = 1$.  
+    Para $\varepsilon >0$, la sucesión de regularizadores estándar en $\R^n$ es definida por
+    $$ \eta_{\varepsilon}(x) = \varepsilon^{-n} \eta(x/\varepsilon)$$
+    Satisfaciendo que $\displaystyle \int \limits_{\R^n} \eta_{\varepsilon}(x) dx = 1$ y $\text{supp}(\eta_{\varepsilon}) \subset \overline{B(0, \varepsilon)}$
+
+::::
+
+:::
+
+
+
+
+# Lemas
+
+:::{.lemmabox}
+
+::::{.lemmabox-header}
+:::::{.lemmabox-icon}
+:::::
+Lema 1.4 T.C.M
+::::
+
+::::{.lemmabox-body}
+
+Si $f_n \in L^1(X)$, $0 \leq f_1(x) \leq f_2(x) \leq \cdots$, y $\left\|f_n\right\|_{L^1(X)} \leq C<\infty$, entonces $\lim _{n \rightarrow \infty} f_n(x)=f(x)$ con $f \in L^1(X)$ y $\left\|f_n-f\right\|_{L^1} \rightarrow 0$ conforme $n \rightarrow 0$.
+
+::::
+
+:::
+
+
+
+:::{.lemmabox}
+
+::::{.lemmabox-header}
+:::::{.lemmabox-icon}
+:::::
+Lema 1.5 T.C.D
+::::
+
+::::{.lemmabox-body}
+
+Si $f_n \in L^1(X)$, $\lim _{n \rightarrow \infty} f_n(x)=f(x)$ casi en todas partes, y si $\exists g \in L^1(X)$ tal que $\left|f_n(x)\right| \leq |g(x)|$ casi en todas partes para todo $n$, entonces $f \in L^1(X)$ y $\left\|f_n-f\right\|_{L^1} \rightarrow 0$.
+
+::::
+
+:::
+
+
+
+
+:::{.lemmabox}
+
+::::{.lemmabox-header}
+:::::{.lemmabox-icon}
+:::::
+Lema 1.8 Fatou
+::::
+
+::::{.lemmabox-body}
+
+Supongamos que la secuencia $f_n: \Omega \rightarrow \overline{\mathbb{R}}$ y $f_n \geq 0$. Entonces,
+$$
+\int_{\Omega} \liminf _{n \rightarrow \infty} f_n(x) d x \leq \liminf _{n \rightarrow \infty} \int_{\Omega} f_n(x) d x
+$$
+
+::::
+
+:::
+
+
+# Teoremas 
+
+
+:::{.theorembox}
+
+::::{.theorembox-header}
+:::::{.theorembox-icon}
+:::::
+Teorema 1.2 Desigualdad de Hölder
+::::
+
+::::{.theorembox-body}
+
+Supongamos que $1 \leq p \leq \infty$ y $1<q<\infty$ con $\frac{1}{p}+\frac{1}{q}=1$. Si $f \in L^p$ y $g \in L^q$, entonces $f g \in L^1$. Además,
+$$
+\|f g\|_{L^1} \leq \|f\|_{L^p}\|g\|_{L^q}.
+$$
+
+Observa que si $p=q=2$, entonces esto es la desigualdad de Cauchy-Schwarz ya que $\|f g\|_{L^1}=\left|(f, g)_{L^2}\right|$. ^[$(\cdot,\cdot)$ se refiere al producto interno]
+
+::::
+
+:::
+
+
+
+:::{.theorembox}
+
+::::{.theorembox-header}
+:::::{.theorembox-icon}
+:::::
+Teorema 1.3 Desigualdad de Minkowski
+::::
+
+::::{.theorembox-body}
+
+Si $1 \leq p \leq \infty$ y $f, g \in L^p$, entonces
+$$
+\|f+g\|_{L^p} \leq \|f\|_{L^p}+\|g\|_{L^p}.
+$$
+
+::::
+
+:::
+
+
+
+:::{.theorembox}
+
+::::{.theorembox-header}
+:::::{.theorembox-icon}
+:::::
+Teorema 1.6
+::::
+
+::::{.theorembox-body}
+
+El espacio $L^p$ es completo con $p \leq \infty$.
+
+::::
+
+:::
+
+
+
+:::{.theorembox}
+
+::::{.theorembox-header}
+:::::{.theorembox-icon}
+:::::
+Teorema 1.7 Teorema de Convergencia Monótona
+::::
+
+::::{.theorembox-body}
+
+Sea $f_n: \Omega \rightarrow \mathbb{R} \cup\{+\infty\}$ una secuencia de funciones, $f_n \geq 0$, y supongamos que la secuencia $f_n$ es monótonamente creciente, es decir,
+$$
+f_1 \leq f_2 \leq f_3 \leq \cdots
+$$
+Entonces,
+$$
+\lim _{n \rightarrow \infty} \int_{\Omega} f_n(x) d x=\int_{\Omega} \lim _{n \rightarrow \infty} f_n(x) d x
+$$
+
+::::
+
+:::
+
+
+
+:::{.theorembox}
+
+::::{.theorembox-header}
+:::::{.theorembox-icon}
+:::::
+Teorema 1.9 Teorema de Convergencia Dominada
+::::
+
+::::{.theorembox-body}
+
+Supongamos que la secuencia $f_n: \Omega \rightarrow \mathbb{R}$, $f_n(x) \rightarrow f(x)$ casi en todas partes (con respecto a la medida de Lebesgue), y además, $\left|f_n\right| \leq g \in L^1(\Omega)$. Entonces $f \in L^1(\Omega)$ y
+$$
+\lim _{n \rightarrow \infty} \int_{\Omega} f_n(x) d x=\int_{\Omega} f(x) d x .
+$$
+De manera equivalente, $f_n \rightarrow f$ en $L^1(\Omega)$, por lo que $\lim _{n \rightarrow \infty}\left\|f_n-f\right\|_{L^1(\Omega)}=0$
+
+::::
+
+:::
+
+
+
+
+:::{.theorembox}
+
+::::{.theorembox-header}
+:::::{.theorembox-icon}
+:::::
+Teorema 1.12 Teorema fundamental del calculo de variaciones
+::::
+
+::::{.theorembox-body}
+
+Si $f \in L_{\text {loc }}^1(\Omega)$ satisfaciendo que
+    $$
+    \int_{\Omega} f \varphi d x=0
+    $$  
+    para cada $\varphi \in C_0^{\infty}(\Omega)$, entonces $f=0$ a.e en $\Omega$.
+
+::::
+
+:::
+
+
+
+
+
+:::{.theorembox}
+
+::::{.theorembox-header}
+:::::{.theorembox-icon}
+:::::
+Teorema 1.15 Regularizadores en $L^p(\Omega)$
+::::
+
+::::{.theorembox-body}
+
+A) $f^{\varepsilon} \in C^{\infty}(\Omega_{\varepsilon})$  
+B) $f^{\varepsilon} \to f$ a.e. a medida que $\varepsilon \to 0$  
+C) Si $f \in C^0(\Omega)$, entonces $f^{\varepsilon} \to f$ uniformemente en subconjuntos compacto de $\Omega$  
+D) Si $p \in [1, \infty)$ y $f \in L^1_{\text{loc}}(\Omega)$, entonces $f^{\varepsilon} \to f \in L^1_{\text{loc}}(\Omega) $ 
+
+::::
+
+:::

@@ -1,0 +1,21 @@
+---
+title: Notación
+---
+::: {.hidden}
+$$
+\usepackage{amssymb}
+\def\R{{\mathbb{R}}}
+$$
+:::
+
+$\Omega$ denotará un dominio abierto y suave en $\R^n$. Recuerde que $M$ es una variedad suave de $\R^n$ de dimensión $n$ si para todo punto $p \in M$ existe una función suave de un abierto $U$ de $\R^n$ a $M$ tal que $f(U)$ contiene a $p$ y la inversa de $f(U)$ a $U$ es suave. Se dice que $\Omega$ es suave si $\partial \Omega$ es una variedad suave.
+
+- $C^k(\Omega)$ es el espacio de las funciones que son $k$ veces diferenciables en $\Omega$ para enteros $k \geq 0$
+- El supp$(f)$ se define por  el conjunto $\overline{\{x \in \Omega \mid f(x) \neq 0\}}$ y es llamado el soporte de la función f.
+- $C_0(\Omega) = \{ u \in C(\Omega) \mid  \mathrm{supp}(u) \text{ es compacto en }  \Omega\}$
+- $C_0^{\infty}(\Omega) = C^{\infty}(\Omega) \cap C_0(\Omega)$
+- $A \subset \subset \Omega$ significa que $\overline{A} \subset \Omega$ y $\overline{A}$ es compacto. Es decir, $A$ está compactamente contenido en $\Omega$.  
+
+<center>
+![](Figures/Manifold.png){width=70%}
+</center>

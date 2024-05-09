@@ -1,0 +1,93 @@
+---
+title: Espacios de Hölder
+---
+::: {.hidden}
+$$
+\usepackage{amssymb}
+\usepackage{amsmath}
+\def\R{{\mathbb{R}}}
+\def\Z{{\mathbb{Z}}}
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\def\sen{{\textrm{sen}}}
+\def\cos{{\textrm{cos}}}
+\renewcommand{\qedsymbol}{\blacksquare}
+$$
+
+:::
+
+Recordar que para $\Omega \subset \mathbb{R}^n$ abierto y suave, la clase de funciones Lipschitz $u: \Omega \rightarrow \mathbb{R}$ satisface la estimación
+
+$$
+|u(x)-u(y)| \leq C|x-y| \quad \forall x, y \in \Omega
+$$
+
+para alguna constante $C$.
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 5.1 Derivada clásica
+::::
+
+::::{.definitionbox-body}
+
+Una función $u: \Omega \rightarrow \mathbb{R}$ es diferenciable en $x \in \Omega$ si existe $f: \Omega \rightarrow \mathcal{L}\left(\mathbb{R}^n ; \mathbb{R}^n\right)$ tal que
+    $$
+    \frac{|u(x)-u(y)-f(x) \cdot(x-y)|}{|x-y|} \rightarrow 0 .
+    $$
+    Llamamos $f(x)$ la derivada clásica (o gradiente) de $u(x)$, y la denotamos por $D u(x)$.
+
+::::
+
+:::
+
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 5.2 
+::::
+
+::::{.definitionbox-body}
+
+Si $u: \Omega \rightarrow \mathbb{R}$ es acotado y continuo, entonces
+    $$
+    \norm{u}_{C^0(\bar{\Omega})}=\max _{x \in \Omega}|u(x)|
+    $$
+    Si además $u$ tiene una derivada continua y acotada, entonces
+    $$
+    \norm{u}{C^1(\bar{\Omega})}=\norm{u}{C^0(\bar{\Omega})}+\norm{D u}_{C^0(\bar{\Omega})} .
+    $$
+
+::::
+
+:::
+
+:::{.definitionbox}
+
+::::{.definitionbox-header}
+:::::{.definitionbox-icon}
+:::::
+Definición 5.3
+::::
+
+::::{.definitionbox-body}
+
+Para $0<\gamma \leq 1$, el espacio $C^{0, \gamma}(\bar{\Omega})$ consiste en aquellas funciones para las que
+    $$
+    \norm{u}_{C^{0, \gamma}(\bar{\Omega})}:= \norm{u}_{C^0(\bar{\Omega})}+[u]_{C^{0, \gamma}(\bar{\Omega})}<\infty
+    $$
+    donde la seminorma de Hölder $\gamma$-ésimo $[u]_{C^{0, \gamma}(\bar{\Omega})}$ está definido como
+    $$
+    [u]_{C^{0, \gamma}(\bar{\Omega})}=\max _{\substack{x, y \in \Omega \\ x \neq y}}\left(\frac{|u(x)-u(y)|}{|x-y|^\gamma}\right) .
+    $$
+    El espacio $C^{0, \gamma}(\bar{\Omega})$ es un espacio de Banach.
+
+::::
+
+:::
