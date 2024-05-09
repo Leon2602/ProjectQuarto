@@ -11,7 +11,7 @@ $$
 :::
 
 
-# Definiciónes
+# Definiciones
 
 
 :::{.definitionbox}
