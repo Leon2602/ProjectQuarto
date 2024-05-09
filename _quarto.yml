@@ -5,6 +5,7 @@ project:
 website:
   title: "ProjectSEE"
   navbar:
+    search: false
     logo: Figures/logo_espol.png
     background: dark
     tools:
@@ -13,33 +14,24 @@ website:
       - icon: github
         menu:
           - text: Source Code
-            href:  https://code.com
+            href:  https://github.com/Leon2602/ProjectQuarto
           - text: Report a Bug
-            href:  https://bugs.com
+            href:  https://github.com/Leon2602/ProjectQuarto/blob/master/.github/ISSUE_TEMPLATE/bug_report.md
   sidebar:
     style: "docked"
     alignment: "center"
-    search: false
     background: light
     contents:
       - section: "Preliminar"
         contents:
           - Notation.qmd
-      - section: "Resultados importantes"
-        contents:
           - Teo.qmd
-      - section: "Espacios de Sobolev H^k(Ω) para enteros k ≥ 0"
+      - section: "Espacios de Sobolev"
         contents:
           - WeakDerivate.qmd
           - SobolevSpace.qmd
-      - section: "Teorema del embebimiento"
-        contents:
           - SobolevEmbeb.qmd
-      - section: "Aproximación mediante funciones suaves"
-        contents:
           - SobolevAprox.qmd
-      - section: "Espacios de Hölder"
-        contents:
           - HolderSpace.qmd
 
 
