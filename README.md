@@ -1,41 +1,40 @@
-# Espacios de Sobolev - Proyecto Quarto
+# Sobolev Spaces - Quarto Project
 
-Este proyecto es una página web educativa diseñada para ofrecer una comprensión intuitiva y técnica de los Espacios de Sobolev, que son fundamentales en el análisis matemático y en la teoría de ecuaciones diferenciales parciales.
+This project is an educational website designed to provide an intuitive and technical understanding of Sobolev Spaces, which are fundamental in mathematical analysis and the theory of partial differential equations.
 
-## Tecnologías Utilizadas
-- **Quarto**: Utilizado para generar contenido dinámico y estructurado.
-- **HTML/CSS**: Para estructura y diseño web.
-- **GitHub Pages**: Alojamiento de la página web.
+## Technologies Used
+- **Quarto**: Used to generate dynamic and structured content.
+- **HTML/CSS**: For web structure and design.
+- **GitHub Pages**: Hosting for the webpage.
 
-## Uso
+## Usage
 
-Para clonar y ejecutar este proyecto localmente, sigue estos pasos:
+To clone and run this project locally, follow these steps:
 
-1. Clona el repositorio:
-git clone https://github.com/Leon2602/ProjectQuarto.git
-2. Navega al directorio del proyecto:
-cd ProjectQuarto
-3. Abre los archivos con Quarto o visualiza directamente los HTML generados.
+1. Clone the repository:
+   git clone https://github.com/Leon2602/ProjectQuarto.git
+2. Navigate to the project directory:
+   cd ProjectQuarto
+3. Open the files with Quarto or directly view the generated HTMLs.
 
-Para contribuir al proyecto, considera forkear el repositorio y hacer pull requests.
+To contribute to the project, consider forking the repository and making pull requests.
 
-## Reporte de Bugs
+## Bug Reporting
 
-Si encuentras un error o problema en la página, por favor reportalo mediante la sección de 'Issues' en este repositorio de GitHub, o envía un correo directamente a [tu-email]@example.com.
+If you find an error or issue on the page, please report it through the 'Issues' section of this GitHub repository, or send an email directly to flmeza@espol.edu.ec.
 
-## Autores
+## Authors
 
-- Leonardo - Trabajo inicial - [Leon2602](https://github.com/Leon2602)
+- Leonardo - Initial work - [Leon2602](https://github.com/Leon2602)
 
-## Reconocimientos
+## Acknowledgments
 
-- Agradecimientos a la SEE por proporcionar los recursos y formación necesarios para desarrollar este proyecto.
+- Thanks to SEE for providing the necessary resources and training to develop this project.
 
-## Licencia
+## License
 
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE) para más detalles.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for more details.
 
-## Estado del Proyecto
+## Project Status
 
-Este proyecto se encuentra actualmente en desarrollo. Se aceptan contribuciones y sugerencias para mejorar la funcionalidad y el contenido educativo.
-
+This project is currently in development. Contributions and suggestions to improve the functionality and educational content are welcome
