@@ -95,7 +95,7 @@ Sea $n=2$. Si $\abs{\alpha} = 0$, entonces $\alpha = (0,0)$; si $\abs{\alpha} = 
 ::::{.definitionbox-header}
 :::::{.definitionbox-icon}
 :::::
-Definicion
+Definicion 2.3
 ::::
 
 ::::{.definitionbox-body}
