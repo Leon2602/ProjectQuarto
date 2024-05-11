@@ -24,15 +24,23 @@ website:
     contents:
       - section: "Preliminar"
         contents:
-          - Notation.qmd
-          - Teo.qmd
+          - title: "Notación"
+            file: Notation.qmd
+          - title: "Teoremas Importantes"
+            file: Teo.qmd
       - section: "Espacios de Sobolev"
         contents:
-          - WeakDerivate.qmd
-          - SobolevSpace.qmd
-          - SobolevEmbeb.qmd
-          - SobolevAprox.qmd
-          - HolderSpace.qmd
+          - title: "Derivada Débil"
+            file: WeakDerivate.qmd
+          - title: "Espacio de Sobolev"
+            file: SobolevSpace.qmd
+          - title: "Teorema del Embebimiento de Sobolev"
+            file: SobolevEmbeb.qmd
+          - title: "Aproximación mediante Funciones Suaves"
+            file: SobolevAprox.qmd
+          - title: "Espacios de Hölder"
+            file: HolderSpace.qmd
+
 
 
 
