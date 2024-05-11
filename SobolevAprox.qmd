@@ -40,7 +40,7 @@ Una secuencia $u_j \rightarrow u$ en $W_{\mathrm{loc}}^{k, p}(\Omega)$ si $u_j \
 ::::{.theorembox-header}
 :::::{.theorembox-icon}
 :::::
-Definición
+Teorema 4.2
 ::::
 
 ::::{.theorembox-body}

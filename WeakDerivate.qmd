@@ -5,10 +5,11 @@ title: Derivada Débil
 $$
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
 \def\R{{\mathbb{R}}}
 \def\Z{{\mathbb{Z}}}
-\newcommand{\norm}[1]{\left\| #1 \right\|}
-\newcommand{\abs}[1]{\left| #1 \right|}
+\renewcommand{\norm}[1]{\left\| #1 \right\|}
+\renewcommand{\abs}[1]{\left| #1 \right|}
 \def\sen{{\textrm{sen}}}
 \def\cos{{\textrm{cos}}}
 $$
@@ -21,7 +22,7 @@ $$
 ::::{.definitionbox-header}
 :::::{.definitionbox-icon}
 :::::
-Definicion 2.1
+Definición 2.1
 ::::
 
 ::::{.definitionbox-body}
@@ -62,7 +63,7 @@ $$
 ::::{.definitionbox-header}
 :::::{.definitionbox-icon}
 :::::
-Definicion 2.2
+Definición 2.2
 ::::
 
 ::::{.definitionbox-body}
@@ -95,7 +96,7 @@ Sea $n=2$. Si $\abs{\alpha} = 0$, entonces $\alpha = (0,0)$; si $\abs{\alpha} = 
 ::::{.definitionbox-header}
 :::::{.definitionbox-icon}
 :::::
-Definicion 2.3
+Definición 2.3
 ::::
 
 ::::{.definitionbox-body}
@@ -220,7 +221,7 @@ Sea $n=1$ y el conjunto $\Omega=(0,2)$. Defina la función
 ::::{.definitionbox-header}
 :::::{.definitionbox-icon}
 :::::
-Definicion 2.4
+Definición 2.4
 ::::
 
 ::::{.definitionbox-body}
@@ -253,12 +254,12 @@ $$
     $Du=-\cos (1 / x) / x^2 \in L_{\text {loc }}^1(0,1)$, pero $u \notin W^{1, p}(\Omega)$ para cualquier $p$.
 
 <center>
-![](Figures/Figura2.png){width=50%}
+![Figura3](Figures/Figura2.png){width=50%}
 </center>
 
 
 <center>
-![](Figures/Figura3.png){width=50%}
+![Figura4](Figures/Figura3.png){width=50%}
 </center>
 
 ::::
@@ -270,7 +271,7 @@ $$
 ::::{.definitionbox-header}
 :::::{.definitionbox-icon}
 :::::
-Definicion 2.5
+Definición 2.5
 ::::
 
 ::::{.definitionbox-body}
@@ -313,6 +314,7 @@ Sea $\Omega=B(0,1) \subset \mathbb{R}^2$ y el conjunto $u(x)=|x|^{-\alpha}$. Que
 ::::
 
 :::
+
 
 ::: {.callout-tip}
 ## Observación 

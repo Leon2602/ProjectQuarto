@@ -250,10 +250,11 @@ window.Quarto = {
 <p><span class="math display">\[
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
 \def\R{{\mathbb{R}}}
 \def\Z{{\mathbb{Z}}}
-\newcommand{\norm}[1]{\left\| #1 \right\|}
-\newcommand{\abs}[1]{\left| #1 \right|}
+\renewcommand{\norm}[1]{\left\| #1 \right\|}
+\renewcommand{\abs}[1]{\left| #1 \right|}
 \def\sen{{\textrm{sen}}}
 \def\cos{{\textrm{cos}}}
 \]</span></p>
@@ -263,7 +264,7 @@ window.Quarto = {
 <div class="definitionbox-icon">
 
 </div>
-<p>Definicion 2.1</p>
+<p>Definición 2.1</p>
 </div>
 <div class="definitionbox-body">
 <p>Para <span class="math inline">\(\Omega \subset \mathbb{R}^n\)</span>, el conjunto</p>
@@ -292,7 +293,7 @@ C^{\infty}_{0}(\Omega) = \{ u \in C^{\infty}(\Omega) \mid \text{supp}(u) \subset
 <div class="definitionbox-icon">
 
 </div>
-<p>Definicion 2.2</p>
+<p>Definición 2.2</p>
 </div>
 <div class="definitionbox-body">
 <p>Un elemento <span class="math inline">\(\alpha \in \Z_{+}^{n}\)</span>(enteros no negativos) es llamado multi-índice. Para <span class="math inline">\(\alpha = (\alpha_1, \ldots, \alpha_n)\)</span>, escribimos <span class="math inline">\(D = \frac{\partial^{\alpha_1} }{\partial x_1^{\alpha_1}} \cdots \frac{\partial^{\alpha_n} }{\partial x_n^{\alpha_n}}\)</span> y <span class="math inline">\(|\alpha| = \alpha_1 + \ldots +  \alpha_n\)</span>.</p>
@@ -314,7 +315,7 @@ C^{\infty}_{0}(\Omega) = \{ u \in C^{\infty}(\Omega) \mid \text{supp}(u) \subset
 <div class="definitionbox-icon">
 
 </div>
-<p>Definicion 2.3</p>
+<p>Definición 2.3</p>
 </div>
 <div class="definitionbox-body">
 <p>Suponga que <span class="math inline">\(u \in L^{1}_{\mathrm{loc}}(\Omega)\)</span>. Entonces <span class="math inline">\(v^{\alpha} \in L^{1}_{\mathrm{loc}}(\Omega)\)</span> es llamada la <em><span class="math inline">\(\alpha^{th}\)</span> derivada débil</em> de (u), escrita como <span class="math inline">\(v^{\alpha} = D^{\alpha}u\)</span>, si</p>
@@ -396,7 +397,7 @@ Para probarlo, asumamos por contradicción que existe <span class="math inline">
 <div class="definitionbox-icon">
 
 </div>
-<p>Definicion 2.4</p>
+<p>Definición 2.4</p>
 </div>
 <div class="definitionbox-body">
 <p>Para <span class="math inline">\(p \in[1, \infty]\)</span>, define <span class="math inline">\(W^{1, p}(\Omega)=\left\{u \in L^p(\Omega) \mid\right.\)</span> la derivada débil existe,<span class="math inline">\(\, Du \in\)</span> <span class="math inline">\(\left.L^p(\Omega)\right\}\)</span>, donde <span class="math inline">\(Du\)</span> es la derivada débil de <span class="math inline">\(u\)</span>.</p>
@@ -417,10 +418,20 @@ Para probarlo, asumamos por contradicción que existe <span class="math inline">
     \end{align*}
 \]</span> Por tanto, <span class="math inline">\(Du=-\cos (1 / x) / x^2 \in L_{\text {loc }}^1(0,1)\)</span>, pero <span class="math inline">\(u \notin W^{1, p}(\Omega)\)</span> para cualquier <span class="math inline">\(p\)</span>.</p>
 <center>
-<img src="Figures/Figura2.png" class="img-fluid" style="width:50.0%">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures/Figura2.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Figura3</figcaption>
+</figure>
+</div>
 </center>
 <center>
-<img src="Figures/Figura3.png" class="img-fluid" style="width:50.0%">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures/Figura3.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Figura4</figcaption>
+</figure>
+</div>
 </center>
 </div>
 </div>
@@ -429,7 +440,7 @@ Para probarlo, asumamos por contradicción que existe <span class="math inline">
 <div class="definitionbox-icon">
 
 </div>
-<p>Definicion 2.5</p>
+<p>Definición 2.5</p>
 </div>
 <div class="definitionbox-body">
 <p>En el caso <span class="math inline">\(p=2\)</span>, definimos <span class="math inline">\(H^1(\Omega)=W^{1, p}(\Omega)\)</span></p>

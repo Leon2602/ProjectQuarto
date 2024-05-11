@@ -17,5 +17,5 @@ $\Omega$ denotará un dominio abierto y suave en $\R^n$. Recuerde que $M$ es una
 - $A \subset \subset \Omega$ significa que $\overline{A} \subset \Omega$ y $\overline{A}$ es compacto. Es decir, $A$ está compactamente contenido en $\Omega$.  
 
 <center>
-![](Figures/Manifold.png){width=70%}
+![Figura1](Figures/Manifold.png){width=70%}
 </center>

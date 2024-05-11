@@ -28,7 +28,7 @@ Para $\Omega \subset \R^n$ abierto, el conjunto
     L^{p}_{\mathrm{loc}}(\Omega) = \{u: \Omega \to \R \mid u \in L^{p}(\tilde{\Omega}) \quad \forall \tilde{\Omega} \subset \subset \Omega\}
     $$
 <center>
-![](Figures/Figura1.png){width=50%}
+![Figura2](Figures/Figura1.png){width=50%}
 </center>
 ::::
 
